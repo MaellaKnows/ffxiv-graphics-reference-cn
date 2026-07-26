@@ -1,10 +1,12 @@
-# FFXIV Mod Wiki
+# FFXIV Graphics Reference CN
 
-欢迎来到 FFXIV Mod 制作资料库，本站简称GRC。
+欢迎来到 FFXIV Mod 制作资料库，提供Final Fantasy XIV 图形渲染与 Mod 制作中文参考文档。
 
-本网页主要介绍FF14的各类mod着色器，所有内容为个人归纳总结。
+本站可简称GRC。
 
-资料来源：[xivmodding](https://xivmodding.com/)
+本网页主要介绍FF14的各类mod着色器，所有内容为个人归纳总结与翻译。
+
+着色器资料来源：[xivmodding](https://xivmodding.com/)
 
 ---
 
