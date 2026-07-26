@@ -144,5 +144,8 @@ extra:
       - icon: fontawesome/brands/discord
         link: https://discord.gg/MaKs9YcmK9
 
-      - icon: fontawesome/brands/patreon
-        link: https://www.patreon.com/
+      - icon: fontawesome/brands/blender
+        link: https://www.blender.org/
+
+      - icon: fontawesome/solid/cube
+        link: https://www.xivmodarchive.com/
