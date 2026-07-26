@@ -1,4 +1,5 @@
 site_name: FFXIV Graphics Reference CN
+site_url: https://maellaknows.github.io/ffxiv-graphics-reference-cn/
 site_description: 中文 Final Fantasy XIV 图形渲染与 Mod 制作参考文档
 site_author: Maella knows
 
@@ -25,7 +26,7 @@ palette:
       icon: material/brightness-4
       name: 切换至亮色模式
 
-features:
+    features:
   # 导航
     - navigation.tabs
     - navigation.sections
