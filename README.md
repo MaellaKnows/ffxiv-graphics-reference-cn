@@ -21,6 +21,7 @@ FFXIV Graphics Reference CN 是一个面向中文社区的开放技术文档项�
 - Substance Painter Workflow
 
 本页面目标是建立一套适合中文mod社区长期维护的原创技术文档。
+使用了chatgpt进行前期初步建立。
 
 ## 当前状态
 
