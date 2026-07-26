@@ -1,0 +1,147 @@
+site_name: FFXIV Graphics Reference CN
+site_description: 中文 Final Fantasy XIV 图形渲染与 Mod 制作参考文档
+site_author: Maella knows
+
+repo_name: GitHub
+repo_url: https://github.com/MaellaKnows/ffxiv-graphics-reference-cn
+
+
+theme:
+  name: material
+  language: zh
+
+icon:
+    repo: fontawesome/brands/github
+
+palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: 切换至暗色模式
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: 切换至亮色模式
+
+features:
+  # 导航
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+
+    # 目录
+    - toc.follow
+
+    # 搜索
+    - search.highlight
+    - search.suggest
+    - search.share
+
+    # 内容
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - 首页: index.md
+
+  - 入门:
+      - getting-started/index.md
+      - 安装环境: getting-started/installation.md
+      - 文件结构: getting-started/folder-structure.md
+      - 名词解释: getting-started/glossary.md
+
+  - Shaders:
+      - Shader Reference: shaders/shader-reference.md
+
+      - Character Shaders:
+          - Character Shader(最常用着色器): shaders/character-shaders.md
+          - CharacterLegacy Shader: shaders/character-legacy shader.md
+          - Tattoo Shader: shaders/character-tattoo-shaders.md
+          - Transparency Shader: shaders/character-transparency-shader.md
+
+      - Face & Eye:
+          - Face Shader: shaders/face-shaders.md
+          - Eye Shader: shaders/eye-shaders.md
+          - Eye Occlusion Shader: shaders/eye-occlusion-shader.md
+
+      - Material Shaders:
+          - Hair Shader: shaders/hair-shaders.md
+          - Skin Shader: shaders/skin-shaders.md
+          - Glass Shader: shaders/glass-shader.md
+          - Stocking Shader: shaders/stocking-shader.md
+
+      - Additional Data:
+          - Additional Data: shaders/additional-data.md
+
+  - Material:
+      - materials/index.md
+      - MTRL 格式: materials/mtrl-format.md
+      - Material Constants: materials/constants.md
+      - Sampler: materials/sampler.md
+      - Shader Keys: materials/shader-keys.md
+
+  - Texture:
+      - textures/index.md
+      - Normal Map: textures/normal-map.md
+      - Mask Map: textures/mask-map.md
+      - Multi Map: textures/multi-map.md
+      - Color Set: textures/color-set.md
+      - Eye Textures: textures/eye-textures.md
+
+  - Workflow:
+      - workflows/index.md
+      - Blender: workflows/blender.md
+      - TexTools: workflows/textools.md
+      - Penumbra: workflows/penumbra.md
+      - 故障排除: workflows/troubleshooting.md
+
+  - 附录:
+      - appendix/index.md
+      - 术语表: appendix/glossary.md
+      - 更新日志: appendix/changelog.md
+      - 参考资料: appendix/references.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.snippets
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid.js
+
+extra:
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/MaellaKnows/ffxiv-graphics-reference-cn
+
+      - icon: fontawesome/brands/discord
+        link: https://discord.gg/MaKs9YcmK9
+
+      - icon: fontawesome/brands/patreon
+        link: https://www.patreon.com/

@@ -1,0 +1,36 @@
+/* ================================================
+   FFXIV Graphics Reference CN
+   Morandi Theme
+================================================ */
+
+:root{
+
+    /* Primary */
+
+    --md-primary-fg-color:#5C6872;
+    --md-primary-fg-color--light:#74818B;
+    --md-primary-fg-color--dark:#4A555D;
+
+    /* Accent */
+
+    --md-accent-fg-color:#91A8B8;
+
+    /* Background */
+
+    --md-default-bg-color:#F6F5F3;
+
+    /* Content */
+
+    --md-default-fg-color:#2D3135;
+
+    /* Code */
+
+    --md-code-bg-color:#ECE9E5;
+
+    --md-code-fg-color:#2E3337;
+
+    /* Links */
+
+    --md-typeset-a-color:#718EA5;
+
+}
