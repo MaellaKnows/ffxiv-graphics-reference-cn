@@ -66,7 +66,7 @@ Dalamud负责管理所有插件的加载、运行、更新和卸载，确保多�
 链接：
 
 - [Blender官网下载链接](https://www.blender.org/download)
-- [Blender官方插件链接]（https://extensions.blender.org/）
+- [Blender官方插件链接](https://extensions.blender.org/)
 
 <hr style="border: 0; height: 1px; background: #555;"> 
 

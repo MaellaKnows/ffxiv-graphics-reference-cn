@@ -110,6 +110,7 @@ nav:
       - 术语表: appendix/glossary.md
       - 更新日志: appendix/changelog.md
       - 参考资料: appendix/references.md
+      - 材质表: appendix/materials-table.md
 
 markdown_extensions:
   - admonition
