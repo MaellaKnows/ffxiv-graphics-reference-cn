@@ -105,7 +105,7 @@ nav:
       - Penumbra: workflows/penumbra.md
       - 故障排除: workflows/troubleshooting.md
 
-  - Modding Mod 制作:
+  - Mod 制作:
       - modding/index.md
       - Mod制作基础: modding/modding-basics.md
       - Mod制作工具: modding/modding-tools.md
