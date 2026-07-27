@@ -12,8 +12,8 @@ theme:
   language: zh
   custom_dir: overrides
 
-  logo: docs/assets/logo.svg
-  favicon: assets/favicon.png
+  logo: assets/images/icons.png
+  favicon: assets/images/icons.png
 
 
   icon:
@@ -56,15 +56,15 @@ nav:
   - 入门:
       - getting-started/index.md
       - 安装环境: getting-started/installation.md
-      - 文件结构: getting-started/folder-structure.md
+      - FF14的文件结构: getting-started/folder-structure.md
       - 名词解释: getting-started/glossary.md
 
-  - Shaders:
+  - Shaders着色器:
       - Shader Reference: shaders/shader-reference.md
 
       - Character Shaders:
-          - Character Shader(最常用着色器): shaders/character-shaders.md
-          - CharacterLegacy Shader: shaders/character-legacy shader.md
+          - Character Shader (最常用着色器): shaders/character-shaders.md
+          - CharacterLegacy Shader (遗产着色器): shaders/character-legacy shader.md
           - Tattoo Shader: shaders/character-tattoo-shaders.md
           - Transparency Shader: shaders/character-transparency-shader.md
 
@@ -82,22 +82,23 @@ nav:
       - Additional Data:
           - Additional Data: shaders/additional-data.md
 
-  - Material:
+  - Material材质:
       - materials/index.md
       - MTRL 格式: materials/mtrl-format.md
       - Material Constants: materials/constants.md
       - Sampler: materials/sampler.md
       - Shader Keys: materials/shader-keys.md
 
-  - Texture:
+  - Texture贴图:
       - textures/index.md
+      - Base Color: textures/base-color.md
       - Normal Map: textures/normal-map.md
       - Mask Map: textures/mask-map.md
       - Multi Map: textures/multi-map.md
       - Color Set: textures/color-set.md
       - Eye Textures: textures/eye-textures.md
 
-  - Workflow:
+  - Workflow工作流程:
       - workflows/index.md
       - Blender: workflows/blender.md
       - TexTools: workflows/textools.md
@@ -115,6 +116,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
+  - pymdownx.superfences
+  - pymdownx.highlight
+
   - toc:
       permalink: true
 

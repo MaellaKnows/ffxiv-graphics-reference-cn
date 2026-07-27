@@ -1,59 +1,365 @@
-/* ========== GRC 高级灰主题 ========== */
+/* ==================================================
+   FFXIV Graphics Reference CN
+   GRC Advanced Gray Theme
+   ================================================== */
 
-/* Light Mode */
+
+/* ==================================================
+   Color Theme
+   ================================================== */
+
+
+/* ---------- Light Mode ---------- */
+
 [data-md-color-scheme="default"] {
-    /* 顶部导航栏 */
+
     --md-primary-fg-color: #3d3f44;
     --md-primary-fg-color--light: #676c76;
     --md-primary-fg-color--dark: #555962;
 
-    /* 页面背景 */
     --md-default-bg-color: #F5F5F3;
     --md-default-fg-color: #2D3137;
 
-    /* 卡片背景 */
     --md-code-bg-color: #ECEDEA;
+
 }
 
-/* Dark Mode */
+
+
+/* ---------- Dark Mode ---------- */
+
 [data-md-color-scheme="slate"] {
-    /* 顶部导航栏 */
+
     --md-primary-fg-color: #2A2D31;
     --md-primary-fg-color--light: #3A3E43;
     --md-primary-fg-color--dark: #1B1D20;
 
-    /* 页面背景 */
     --md-default-bg-color: #1D1F21;
     --md-default-fg-color: #ECECEC;
 
-    /* 卡片背景 */
     --md-code-bg-color: #26292D;
+
 }
 
-/* ========== 按钮美化 ========== */
-.md-button {
-    border-radius: 12px;
-    transition: all 0.2s ease;
+
+
+/* ==================================================
+   Header
+   保留 Material 原生结构
+   ================================================== */
+
+
+.md-header {
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
 }
+
+.md-header__title {
+
+    margin-left:
+        10px;
+
+}
+
+
+.md-header__button.md-logo {
+
+    margin-right:
+        8px;
+
+}
+
+/* ==================================================
+   Buttons
+   ================================================== */
+
+
+.md-button {
+
+    border-radius:
+        12px;
+
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
 
 .md-button:hover {
-    transform: translateY(-1px);
+
+    transform:
+        translateY(-2px);
+
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.12);
+
 }
 
-/* ========== 卡片美化 ========== */
+
+
+/* ==================================================
+   Cards
+   ================================================== */
+
+
 .md-typeset .grid.cards > ul > li {
-    border-radius: 16px;
-    border: 1px solid #D8DBDF;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    border-radius:
+        16px;
+
+
+    border:
+        1px solid #D8DBDF;
+
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.04);
+
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
 }
 
-[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
-    border-color: #45484D;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+
+.md-typeset .grid.cards > ul > li:hover {
+
+    transform:
+        translateY(-3px);
+
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+
 }
 
-/* ========== 顶部导航栏半透明效果 ========== */
-.md-header {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+
+
+/* Dark Mode Cards */
+
+[data-md-color-scheme="slate"]
+.md-typeset .grid.cards > ul > li {
+
+    border-color:
+        #45484D;
+
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.25);
+
 }
+
+
+
+[data-md-color-scheme="slate"]
+.md-typeset .grid.cards > ul > li:hover {
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.45);
+
+}
+
+
+
+/* ==================================================
+   Markdown Elements
+   ================================================== */
+
+
+/* 图片圆角 */
+
+.md-typeset img {
+
+    border-radius:
+        12px;
+
+}
+
+
+
+/* 表格圆角 */
+
+.md-typeset table:not([class]) {
+
+    border-radius:
+        12px;
+
+
+    overflow:
+        hidden;
+
+}
+
+
+/* ==================================================
+   Dark Mode Buttons
+   ================================================== */
+
+
+[data-md-color-scheme="slate"]
+.md-button {
+
+    background-color:
+        #45484D;
+
+
+    color:
+        #F0F0F0;
+
+
+    border:
+        1px solid #5A5E64;
+
+}
+
+
+
+[data-md-color-scheme="slate"]
+.md-button:hover {
+
+    background-color:
+        #5A5E64;
+
+
+    color:
+        white;
+
+}
+
+
+/* ==================================================
+   Scrollbar
+   ================================================== */
+
+
+::-webkit-scrollbar {
+
+    width:
+        10px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+    border-radius:
+        10px;
+
+}
+
+/* ==================================================
+   GRC Global Background Logo
+   ================================================== */
+
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+
+    background-image:
+        url("../images/icons.png");
+
+
+    background-repeat:
+        no-repeat;
+
+
+    background-position:
+        center center;
+
+
+    background-size:
+        700px;
+
+
+    opacity:
+        .035;
+
+
+    pointer-events:
+        none;
+
+
+    z-index:
+        0;
+
+}
+
+html,
+body {
+
+    background-color:
+        var(--md-default-bg-color);
+
+}
+
+[data-md-color-scheme="slate"]
+body::before {
+
+    opacity:
+        .6;
+
+}
+
+
+/* ==================================================
+   Sidebar Navigation Size
+   ================================================== */
+
+
+/* 左侧索引一级标题 */
+
+.md-nav__item--nested > .md-nav__link {
+
+    font-size:
+        1rem;
+
+    font-weight:
+        600;
+
+}
+
+
+
+/* 当前展开标题 */
+
+.md-nav__item--active > .md-nav__link {
+
+    font-weight:
+        500;
+
+}
+
+
+
+/* 子页面 */
+
+.md-nav__link {
+
+    font-size: 0.7rem;
+    letter-spacing: .02em;
+
+}
+
+
+
+/* ==================================================
+   End
+   ================================================== */

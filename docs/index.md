@@ -1,74 +1,79 @@
 # FFXIV Graphics Reference CN
 
-欢迎来到 **FFXIV Graphics Reference CN (GRC)**。
+> Chinese Documentation for FFXIV Graphics, Shaders, Materials & Modding
 
-这是一个专注于 **Final Fantasy XIV 图形渲染、Shader 与 Mod 制作** 的中文参考文档。
+欢迎来到 **FFXIV Graphics Reference CN（GRC）**。
 
-本站内容主要包含：
+这是一个专注于 **Final Fantasy XIV 图形渲染、Shader、Material 与 Mod 制作** 的中文参考文档。
 
-- FFXIV Shader 解析
-- Material（`.mtrl`）结构说明
-- Texture（`.tex` / `.dds`）解析
-- Mod 制作工作流
+本站旨在整理并持续维护 FFXIV 图形相关知识，包括：
+
+- Shader 工作机制
+- Material（`.mtrl`）结构解析
+- Texture（`.tex` / `.dds`）说明
+- Character Rendering
+- Mod 制作流程
 - 常用工具与开发资料
 
-所有 Shader 内容均基于社区资料整理、验证与翻译，并结合实际 Mod 制作经验进行补充。
+所有内容均基于社区公开资料整理、翻译、验证，并结合实际 Mod 制作经验进行补充。
 
-资料来源：<https://xivmodding.com/>
+[:material-book-open-page-variant: 开始阅读](getting-started/){ .md-button .md-button--primary }
+[:material-github: GitHub](https://github.com/){ .md-button }
 
 ---
 
 ## 分类导航
 
+
 <div class="grid cards" markdown>
 
--   :material-school:
+- :material-school:
 
     ### 入门
 
-    环境配置、目录结构、基础知识。
+    环境配置、工具安装、目录结构、基础知识。
 
-    [开始阅读](getting-started/)
+    [:material-arrow-right: 开始阅读](getting-started/)
 
--   :material-palette:
+- :material-palette:
 
-    ### Shaders
+    ### Shader Reference 着色器
 
-    Character、Hair、Skin、Glass 等全部 Shader 文档。
+    Character、Hair、Skin、Glass、Weapon 等 Shader 文档。
 
-    [查看 Shader Reference](shaders/shader-reference/)
+    [:material-arrow-right: 查看文档](shaders/shader-reference/)
 
--   :material-layers:
+- :material-layers:
 
-    ### Materials
+    ### Materials 材质
 
-    MTRL 文件结构、Constants、Shader Keys、Sampler。
+    `.mtrl` 文件结构、Shader Keys、Constants、Sampler。
 
-    [查看 Materials](materials/)
+    [:material-arrow-right: 查看 Materials](materials/)
 
--   :material-image-multiple:
+- :material-image-multiple:
 
-    ### Textures
+    ### Textures 贴图
 
-    Normal、Mask、Multi、Color Set、Eye Texture 等。
+    Normal、Mask、Multi、Color Set、Eye Texture 等纹理说明。
 
-    [查看 Textures](textures/)
+    [:material-arrow-right: 查看 Textures](textures/)
 
--   :material-hammer-wrench:
+- :material-hammer-wrench:
 
-    ### Workflow
+    ### Workflow 工作流
 
-    Blender、TexTools、Penumbra 与制作流程。
+    Blender、TexTools、Penumbra、Photoshop 等制作流程。
 
-    [查看 Workflow](workflows/)
+    [:material-arrow-right: 查看 Workflow](workflows/)
 
--   :material-bookshelf:
+- :material-bookshelf:
 
-    ### 附录
+    ### Appendix
 
     术语表、更新日志、参考资料。
 
-    [查看附录](appendix/)
+    [:material-arrow-right: 查看附录](appendix/)
 
 </div>
 
@@ -78,20 +83,20 @@
 
 - :material-star-outline: Character Shader
 - :material-star-outline: Shader Reference
-- :material-star-outline: MTRL 格式
+- :material-star-outline: Material Structure (`.mtrl`)
 - :material-star-outline: Normal Map
 - :material-star-outline: Color Set
+- :material-star-outline: Texture Channels
+- :material-star-outline: Character Rendering Pipeline
 
 ---
 
 ## 常用网站
 
+[:material-web: XIV Modding Wiki](https://xivmodding.com/){ .md-button }
 [:fontawesome-brands-github: TexTools](https://github.com/FFXIV-TexTools){ .md-button }
 
-[:material-book-open-page-variant: Penumbra Wiki](https://github.com/xivdev/Penumbra){ .md-button }
-
 [:material-cube-outline: Blender](https://www.blender.org/){ .md-button }
-
 [:material-earth: XIV Mod Archive](https://www.xivmodarchive.com/){ .md-button }
 
 ---
@@ -103,14 +108,54 @@
 | `.mdl` | 模型文件 |
 | `.mtrl` | 材质文件 |
 | `.tex` | FFXIV 纹理 |
-| `.dds` | 通用纹理 |
-| `.pap` | 动画 |
-| `.avfx` | 特效 |
+| `.dds` | DirectDraw Surface |
+| `.pap` | 动画文件 |
+| `.avfx` | 特效文件 |
+| `.sklb` | Skeleton |
+| `.eid` | Equipment Data |
+| `.atex` | Atlas Texture |
+
+---
+
+## 项目目标
+
+GRC 致力于建立一套完整、持续更新的中文 FFXIV 图形参考文档。
+
+包括但不限于：
+
+- Shader Reference
+- Material Documentation
+- Texture Documentation
+- Rendering Pipeline
+- Modding Workflow
+- Reverse Engineering Notes
+- Community Research
+
+欢迎共同完善这份文档。
+
+---
+
+## 资料来源
+
+本项目参考并整理了以下社区公开资源：
+
+- XIV Modding Wiki
+- TexTools
+- Penumbra
+- XIVLauncher / Dalamud
+- Blender Documentation
+- Microsoft DirectX Documentation
+
+以及大量社区研究成果。
 
 ---
 
 ## 联系作者
 
-如果发现文档存在错误，或希望补充内容，欢迎通过页面右下角的 **Discord加入dc频道** 或发送邮件联系。
+如果发现文档存在错误，或希望补充内容，欢迎提交 Issue 或联系作者。
 
 📧 **akiyamaasumi@outlook.com**
+
+💬 **Discord：页面右下角加入服务器**
+
+⭐ 如果本项目对你有所帮助，欢迎支持与分享。

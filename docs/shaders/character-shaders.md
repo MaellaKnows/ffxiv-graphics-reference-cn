@@ -1,4 +1,4 @@
-# Character Shader（角色 Shader）
+# Character Shader（最常用着色器）
 
 > 本章节介绍 FFXIV 中用于角色渲染的 Shader，包括玩家角色（Player Character）、NPC、部分人形敌人与相关对象所使用的 Shader。
 
@@ -28,6 +28,85 @@ Character Shader 的设计目标是在保证性能的前提下，实现角色所
 - 环境光遮蔽（Ambient Occlusion）
 
 对于绝大多数角色 Mod 而言，Character Shader 是最重要的 Shader 类型。
+
+---
+## Texture Data 材质数据
+
+### Normal Texture 法线贴图
+
+| Channel | Function | Description |
+|---|---|---|
+| R | Standard Tangent Space Normal Map | 标准切线空间法线信息 |
+| G | Standard Tangent Space Normal Map | 标准切线空间法线信息 |
+| B | Opacity / Ambient Occlusion* | 不透明度 / 环境光遮蔽（取决于 Shader 实现） |
+| A | Unused | 未使用 |
+
+---
+
+### Mask Texture 遮罩
+
+| Channel | Function | Description |
+|---|---|---|
+| R | Specular Power* | 高光强度 |
+| G | Roughness | 粗糙度 |
+| B | Ambient Occlusion** | 环境光遮蔽 |
+| A | Unused | 未使用 |
+
+---
+
+### Diffuse Texture 漫反射贴图
+
+| Channel | Function | Description |
+|---|---|---|
+| R | Standard Color Data | 标准颜色数据 |
+| G | Standard Color Data | 标准颜色数据 |
+| B | Standard Color Data | 标准颜色数据 |
+| A | ??? | 未知 |
+
+---
+
+### Index Texture id贴图
+
+| Channel | Function | Description |
+|---|---|---|
+| R | Colorset Pair (0-16) | Color Set 索引对（0-16） |
+| G | Colorset Even/Odd Blending | Color Set 奇偶混合 |
+| B | Unused | 未使用 |
+| A | Unused | 未使用 |
+
+
+---
+
+## Model Data 模型数据影响
+
+### Vertex Color 1 顶点色1
+
+| Channel | Function | Description |
+|---|---|---|
+| R | Specular Mask | 高光遮罩 |
+| G | Roughness | 粗糙度 |
+| B | Diffuse Mask | 漫反射遮罩 |
+| A | Opacity | 不透明度 |
+
+---
+
+### Vertex Color 2 顶点色2
+
+| Channel | Function | Description |
+|---|---|---|
+| R | Faux-Wind Influence | 假风影响 |
+| G | Faux-Wind Multiplier | 假风强度倍率 |
+| B | ??? | 未知 |
+| A | ??? | 未知 |
+
+---
+
+## UV Channels UV通道影响
+
+| Channel | Function | Description |
+|---|---|---|
+| UV Channel 1 | Normal UV Channel | 法线纹理 UV 通道 |
+| UV Channel 2 | Decal UV Channel | Decal UV 通道（面妆） |
 
 ---
 
@@ -220,18 +299,7 @@ Shader 只负责提供计算方式。
 
 ## 延伸阅读
 
-建议继续阅读：
-
-- Face Shader
-- Hair Shader
-- Eye Shader
-- Material（MTRL）
-- Shader Keys
-- Material Constants
-
----
-
-## 工作原理（How It Works）
+### 工作原理（How It Works）
 
 Character Shader 的执行流程可以概括为以下几个阶段：
 
@@ -278,7 +346,7 @@ Pixel Shader 则负责计算每一个像素最终显示的颜色。
 
 ---
 
-## Texture Sampling（纹理采样）
+### Texture Sampling（纹理采样）
 
 Character Shader 会从多个 Texture Slot 中读取数据。
 
@@ -318,82 +386,44 @@ flowchart TB
 
 ---
 
-## 实际案例：修改头发颜色
+## Community Notes 社区笔记
 
-目标：
-
-修改角色头发的材质表现。
-
-需要修改：
-
-- **Hair Shader**
-- Hair Material
-- Hair Normal
-- Hair Mask
-
-无需修改：
-
-- Face Shader
-- Eye Shader
-- Skin Shader
-
-最终流程：
-
-```mermaid
-flowchart LR
-
-HairTexture
-
-HairMask
-
-HairMaterial
-
-HairShader
-
-Game
-
-HairTexture --> HairMaterial
-
-HairMask --> HairMaterial
-
-HairMaterial --> HairShader
-
-HairShader --> Game
-```
-
-## Community Notes
-
-### 为什么 Character Shader 看起来没有变化？
+### 为什么我调整了着色器后看起来没有变化？
 
 检查：
 
-□ 是否 Reload Penumbra
+□ 是否 Reload Penumbra （刷新人物）
 
 □ 是否重新生成 MTRL
 
-□ Shader 是否支持该 Constant
+□ Shader 是否支持该材质
 
-□ Shader Key 是否开启
+□ 必须的Shader Key 是否开启
 
-□ 是否导入正确 Texture
+□ 是否导入正确 Texture，并且赋予了对应路径
 
----
-
-### 为什么头发法线无效？
-
-通常原因：
-
-- Hair Shader 未读取 Normal
-
-- Alpha Channel 被覆盖
-
-- Mask 覆盖 Specular
-
-- 面朝向错误
 
 ---
 
-### 为什么我的脸会发光？
+## References 索引
 
-通常因为：
-Emission Constant 或 Mask Alpha被错误修改。
+
+| Name | Description | Link |
+|---|---|---|
+| Dawntrail Shader Reference Table | FFXIV Dawntrail Shader 通道与参数参考表 | https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table |
+| XIV Modding Wiki | FFXIV Modding 资源与研究文档 | https://xivmodding.com/ |
+| TexTools Reference Document | TexTools 相关资源结构参考 | Community Documentation |
+| Penumbra Documentation | Penumbra Mod Framework 文档 | https://github.com/xivdev/Penumbra |
+
+---
+
+## Notes
+
+本文档中的 Shader Channel 信息参考：
+
+- XIV Modding Dawntrail Shader Reference Table
+- TexTools Reference Document
+- FFXIV Modding Community Research
+
+部分 Shader Channel 与 Material 行为仍在持续研究中，
+未知字段会标记为 `???`，并随着后续测试进行更新。

@@ -1,4 +1,4 @@
-# ShaderReference（着色器 参考）
+# ShaderReference（着色器参考）
 
 ## 什么是 Shader（着色器）？
 
