@@ -3,6 +3,8 @@
 
 >内容完全照搬Modding wiki,有英文基础建议阅读原文。
 
+>>由于本站还在基础建设状态，本站后期完成后会进行系统性翻译。
+
 - [XivModding](https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table#bkmrk-hair-shader%3A)
 
 ## Character Shader
