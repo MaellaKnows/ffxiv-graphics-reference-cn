@@ -29,7 +29,7 @@
     
     
       
-        <title>Character Shader(最常用着色器) - FFXIV Graphics Reference CN</title>
+        <title>Character Shader (最常用着色器) - FFXIV Graphics Reference CN</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#character-shader-shader" class="md-skip">
+        <a href="#character-shader" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Character Shader(最常用着色器)
+              Character Shader (最常用着色器)
             
           </span>
         </div>
@@ -284,7 +284,7 @@
   
     
   
-  Shaders
+  Shaders着色器
 
         </a>
       </li>
@@ -306,7 +306,7 @@
   
     
   
-  Material
+  Material材质
 
         </a>
       </li>
@@ -328,7 +328,7 @@
   
     
   
-  Texture
+  Texture贴图
 
         </a>
       </li>
@@ -350,7 +350,7 @@
   
     
   
-  Workflow
+  Workflow工作流程
 
         </a>
       </li>
@@ -568,7 +568,7 @@
   <span class="md-ellipsis">
     
   
-    文件结构
+    FF14的文件结构
   
 
     
@@ -664,7 +664,7 @@
   <span class="md-ellipsis">
     
   
-    Shaders
+    Shaders着色器
   
 
     
@@ -680,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Shaders
+    Shaders着色器
   
 
           </label>
@@ -804,7 +804,7 @@
   <span class="md-ellipsis">
     
   
-    Character Shader(最常用着色器)
+    Character Shader (最常用着色器)
   
 
     
@@ -822,7 +822,7 @@
   <span class="md-ellipsis">
     
   
-    Character Shader(最常用着色器)
+    Character Shader (最常用着色器)
   
 
     
@@ -848,7 +848,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#character-shader" class="md-nav__link">
+  <a href="#character-shader_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         什么是 Character Shader？
@@ -859,10 +859,110 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#character-shader_1" class="md-nav__link">
+  <a href="#texture-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 在渲染流程中的位置
+        Texture Data 材质数据
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Texture Data 材质数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal Texture 法线贴图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mask-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mask Texture 遮罩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diffuse-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffuse Texture 漫反射贴图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-texture-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index Texture id贴图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Data 模型数据影响
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Data 模型数据影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vertex-color-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertex Color 1 顶点色1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-color-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertex Color 2 顶点色2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-channels-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UV Channels UV通道影响
       
     </span>
   </a>
@@ -873,7 +973,7 @@
   <a href="#character-shader_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 的组成
+        Character Shader 在渲染流程中的位置
       
     </span>
   </a>
@@ -884,7 +984,7 @@
   <a href="#character-shader_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 常用纹理
+        Character Shader 的组成
       
     </span>
   </a>
@@ -895,7 +995,7 @@
   <a href="#character-shader_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 常见功能
+        Character Shader 常用纹理
       
     </span>
   </a>
@@ -906,7 +1006,7 @@
   <a href="#character-shader_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 分类
+        Character Shader 常见功能
       
     </span>
   </a>
@@ -915,6 +1015,17 @@
       
         <li class="md-nav__item">
   <a href="#character-shader_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Character Shader 分类
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-shader_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见 Character Shader
@@ -994,9 +1105,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="延伸阅读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1006,8 +1118,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#texture-sampling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1017,15 +1129,9 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        实际案例：修改头发颜色
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1033,41 +1139,19 @@
   <a href="#community-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Community Notes
+        Community Notes 社区笔记
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Community Notes">
+    <nav class="md-nav" aria-label="Community Notes 社区笔记">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#character-shader_7" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        为什么 Character Shader 看起来没有变化？
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        为什么头发法线无效？
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        为什么我的脸会发光？
+        为什么我调整了着色器后看起来没有变化？
       
     </span>
   </a>
@@ -1076,6 +1160,28 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References 索引
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1102,7 +1208,7 @@
   <span class="md-ellipsis">
     
   
-    CharacterLegacy Shader
+    CharacterLegacy Shader (遗产着色器)
   
 
     
@@ -1675,7 +1781,7 @@
   <span class="md-ellipsis">
     
   
-    Material
+    Material材质
   
 
     
@@ -1697,7 +1803,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Material
+    Material材质
   
 
           </label>
@@ -1847,6 +1953,8 @@
       
         
       
+        
+      
     
     
     
@@ -1873,7 +1981,7 @@
   <span class="md-ellipsis">
     
   
-    Texture
+    Texture贴图
   
 
     
@@ -1895,12 +2003,40 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Texture
+    Texture贴图
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textures/base-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base Color
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -2097,7 +2233,7 @@
   <span class="md-ellipsis">
     
   
-    Workflow
+    Workflow工作流程
   
 
     
@@ -2119,7 +2255,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Workflow
+    Workflow工作流程
   
 
           </label>
@@ -2257,6 +2393,8 @@
       
         
           
+        
+      
         
       
         
@@ -2405,6 +2543,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/materials-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    材质表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2439,7 +2605,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#character-shader" class="md-nav__link">
+  <a href="#character-shader_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         什么是 Character Shader？
@@ -2450,10 +2616,110 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#character-shader_1" class="md-nav__link">
+  <a href="#texture-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 在渲染流程中的位置
+        Texture Data 材质数据
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Texture Data 材质数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal Texture 法线贴图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mask-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mask Texture 遮罩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diffuse-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffuse Texture 漫反射贴图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-texture-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index Texture id贴图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Data 模型数据影响
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Data 模型数据影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vertex-color-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertex Color 1 顶点色1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-color-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertex Color 2 顶点色2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-channels-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UV Channels UV通道影响
       
     </span>
   </a>
@@ -2464,7 +2730,7 @@
   <a href="#character-shader_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 的组成
+        Character Shader 在渲染流程中的位置
       
     </span>
   </a>
@@ -2475,7 +2741,7 @@
   <a href="#character-shader_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 常用纹理
+        Character Shader 的组成
       
     </span>
   </a>
@@ -2486,7 +2752,7 @@
   <a href="#character-shader_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 常见功能
+        Character Shader 常用纹理
       
     </span>
   </a>
@@ -2497,7 +2763,7 @@
   <a href="#character-shader_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Character Shader 分类
+        Character Shader 常见功能
       
     </span>
   </a>
@@ -2506,6 +2772,17 @@
       
         <li class="md-nav__item">
   <a href="#character-shader_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Character Shader 分类
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-shader_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见 Character Shader
@@ -2585,9 +2862,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="延伸阅读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2597,8 +2875,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#texture-sampling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2608,15 +2886,9 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        实际案例：修改头发颜色
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2624,41 +2896,19 @@
   <a href="#community-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Community Notes
+        Community Notes 社区笔记
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Community Notes">
+    <nav class="md-nav" aria-label="Community Notes 社区笔记">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#character-shader_7" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        为什么 Character Shader 看起来没有变化？
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        为什么头发法线无效？
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        为什么我的脸会发光？
+        为什么我调整了着色器后看起来没有变化？
       
     </span>
   </a>
@@ -2667,6 +2917,28 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References 索引
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2690,12 +2962,12 @@
   
 
 
-<h1 id="character-shader-shader">Character Shader（角色 Shader）<a class="headerlink" href="#character-shader-shader" title="Permanent link">&para;</a></h1>
+<h1 id="character-shader">Character Shader（最常用着色器）<a class="headerlink" href="#character-shader" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>本章节介绍 FFXIV 中用于角色渲染的 Shader，包括玩家角色（Player Character）、NPC、部分人形敌人与相关对象所使用的 Shader。</p>
 </blockquote>
 <hr />
-<h2 id="character-shader">什么是 Character Shader？<a class="headerlink" href="#character-shader" title="Permanent link">&para;</a></h2>
+<h2 id="character-shader_1">什么是 Character Shader？<a class="headerlink" href="#character-shader_1" title="Permanent link">&para;</a></h2>
 <p>Character Shader 是 FFXIV 中最常见的一类 Shader。</p>
 <p>它负责渲染玩家角色的大部分可见对象，包括：</p>
 <ul>
@@ -2718,7 +2990,230 @@
 </ul>
 <p>对于绝大多数角色 Mod 而言，Character Shader 是最重要的 Shader 类型。</p>
 <hr />
-<h2 id="character-shader_1">Character Shader 在渲染流程中的位置<a class="headerlink" href="#character-shader_1" title="Permanent link">&para;</a></h2>
+<h2 id="texture-data">Texture Data 材质数据<a class="headerlink" href="#texture-data" title="Permanent link">&para;</a></h2>
+<h3 id="normal-texture">Normal Texture 法线贴图<a class="headerlink" href="#normal-texture" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Standard Tangent Space Normal Map</td>
+<td>标准切线空间法线信息</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Standard Tangent Space Normal Map</td>
+<td>标准切线空间法线信息</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Opacity / Ambient Occlusion*</td>
+<td>不透明度 / 环境光遮蔽（取决于 Shader 实现）</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Unused</td>
+<td>未使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="mask-texture">Mask Texture 遮罩<a class="headerlink" href="#mask-texture" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Specular Power*</td>
+<td>高光强度</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Roughness</td>
+<td>粗糙度</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Ambient Occlusion**</td>
+<td>环境光遮蔽</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Unused</td>
+<td>未使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="diffuse-texture">Diffuse Texture 漫反射贴图<a class="headerlink" href="#diffuse-texture" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Standard Color Data</td>
+<td>标准颜色数据</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Standard Color Data</td>
+<td>标准颜色数据</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Standard Color Data</td>
+<td>标准颜色数据</td>
+</tr>
+<tr>
+<td>A</td>
+<td>???</td>
+<td>未知</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="index-texture-id">Index Texture id贴图<a class="headerlink" href="#index-texture-id" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Colorset Pair (0-16)</td>
+<td>Color Set 索引对（0-16）</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Colorset Even/Odd Blending</td>
+<td>Color Set 奇偶混合</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Unused</td>
+<td>未使用</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Unused</td>
+<td>未使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="model-data">Model Data 模型数据影响<a class="headerlink" href="#model-data" title="Permanent link">&para;</a></h2>
+<h3 id="vertex-color-1-1">Vertex Color 1 顶点色1<a class="headerlink" href="#vertex-color-1-1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Specular Mask</td>
+<td>高光遮罩</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Roughness</td>
+<td>粗糙度</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Diffuse Mask</td>
+<td>漫反射遮罩</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Opacity</td>
+<td>不透明度</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="vertex-color-2-2">Vertex Color 2 顶点色2<a class="headerlink" href="#vertex-color-2-2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Faux-Wind Influence</td>
+<td>假风影响</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Faux-Wind Multiplier</td>
+<td>假风强度倍率</td>
+</tr>
+<tr>
+<td>B</td>
+<td>???</td>
+<td>未知</td>
+</tr>
+<tr>
+<td>A</td>
+<td>???</td>
+<td>未知</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="uv-channels-uv">UV Channels UV通道影响<a class="headerlink" href="#uv-channels-uv" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UV Channel 1</td>
+<td>Normal UV Channel</td>
+<td>法线纹理 UV 通道</td>
+</tr>
+<tr>
+<td>UV Channel 2</td>
+<td>Decal UV Channel</td>
+<td>Decal UV 通道（面妆）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="character-shader_2">Character Shader 在渲染流程中的位置<a class="headerlink" href="#character-shader_2" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart LR
 
     MDL["Character Model (.mdl)"]
@@ -2747,7 +3242,7 @@
 <p>Character Shader 并不会直接读取模型。</p>
 <p>真正负责连接模型、纹理与 Shader 的，是对应的 Material（<code>.mtrl</code>）。</p>
 <hr />
-<h2 id="character-shader_2">Character Shader 的组成<a class="headerlink" href="#character-shader_2" title="Permanent link">&para;</a></h2>
+<h2 id="character-shader_3">Character Shader 的组成<a class="headerlink" href="#character-shader_3" title="Permanent link">&para;</a></h2>
 <p>一个 Character Shader 通常包含以下几个部分。</p>
 <table>
 <thead>
@@ -2781,7 +3276,7 @@
 </table>
 <p>这些部分共同决定最终渲染效果。</p>
 <hr />
-<h2 id="character-shader_3">Character Shader 常用纹理<a class="headerlink" href="#character-shader_3" title="Permanent link">&para;</a></h2>
+<h2 id="character-shader_4">Character Shader 常用纹理<a class="headerlink" href="#character-shader_4" title="Permanent link">&para;</a></h2>
 <p>不同 Shader 使用的纹理数量可能不同，但通常包括以下几类。</p>
 <table>
 <thead>
@@ -2826,7 +3321,7 @@
 </table>
 <p>具体使用哪些纹理，仍取决于 Shader 自身的实现。</p>
 <hr />
-<h2 id="character-shader_4">Character Shader 常见功能<a class="headerlink" href="#character-shader_4" title="Permanent link">&para;</a></h2>
+<h2 id="character-shader_5">Character Shader 常见功能<a class="headerlink" href="#character-shader_5" title="Permanent link">&para;</a></h2>
 <p>Character Shader 通常支持以下功能。</p>
 <table>
 <thead>
@@ -2876,7 +3371,7 @@
 </table>
 <p>并非所有 Character Shader 都支持上述全部功能。</p>
 <hr />
-<h2 id="character-shader_5">Character Shader 分类<a class="headerlink" href="#character-shader_5" title="Permanent link">&para;</a></h2>
+<h2 id="character-shader_6">Character Shader 分类<a class="headerlink" href="#character-shader_6" title="Permanent link">&para;</a></h2>
 <p>为了方便理解，本 Wiki 按照渲染对象进行分类。</p>
 <table>
 <thead>
@@ -2914,7 +3409,7 @@
 </table>
 <p>后续章节将分别介绍这些 Shader。</p>
 <hr />
-<h2 id="character-shader_6">常见 Character Shader<a class="headerlink" href="#character-shader_6" title="Permanent link">&para;</a></h2>
+<h2 id="character-shader_7">常见 Character Shader<a class="headerlink" href="#character-shader_7" title="Permanent link">&para;</a></h2>
 <p>下表列出了游戏中常见的 Character Shader。</p>
 <table>
 <thead>
@@ -2988,17 +3483,7 @@
 <p>因此，不能仅根据 Shader 名称判断最终渲染结果。</p>
 <hr />
 <h2 id="_2">延伸阅读<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>建议继续阅读：</p>
-<ul>
-<li>Face Shader</li>
-<li>Hair Shader</li>
-<li>Eye Shader</li>
-<li>Material（MTRL）</li>
-<li>Shader Keys</li>
-<li>Material Constants</li>
-</ul>
-<hr />
-<h2 id="how-it-works">工作原理（How It Works）<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<h3 id="how-it-works">工作原理（How It Works）<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
 <p>Character Shader 的执行流程可以概括为以下几个阶段：</p>
 <pre class="mermaid"><code>flowchart LR
 
@@ -3036,7 +3521,7 @@
 <p>Vertex Shader 负责处理模型顶点。</p>
 <p>Pixel Shader 则负责计算每一个像素最终显示的颜色。</p>
 <hr />
-<h2 id="texture-sampling">Texture Sampling（纹理采样）<a class="headerlink" href="#texture-sampling" title="Permanent link">&para;</a></h2>
+<h3 id="texture-sampling">Texture Sampling（纹理采样）<a class="headerlink" href="#texture-sampling" title="Permanent link">&para;</a></h3>
 <p>Character Shader 会从多个 Texture Slot 中读取数据。</p>
 <p>一个典型流程如下：</p>
 <pre class="mermaid"><code>flowchart TB
@@ -3066,71 +3551,57 @@
 <p>某些 Shader 甚至不会使用 Multi 或 Color Set。</p>
 <p>因此，在修改贴图之前，应先确认当前 Shader 的纹理需求。</p>
 <hr />
-<h2 id="_3">实际案例：修改头发颜色<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>目标：</p>
-<p>修改角色头发的材质表现。</p>
-<p>需要修改：</p>
-<ul>
-<li><strong>Hair Shader</strong></li>
-<li>Hair Material</li>
-<li>Hair Normal</li>
-<li>Hair Mask</li>
-</ul>
-<p>无需修改：</p>
-<ul>
-<li>Face Shader</li>
-<li>Eye Shader</li>
-<li>Skin Shader</li>
-</ul>
-<p>最终流程：</p>
-<pre class="mermaid"><code>flowchart LR
-
-HairTexture
-
-HairMask
-
-HairMaterial
-
-HairShader
-
-Game
-
-HairTexture --&gt; HairMaterial
-
-HairMask --&gt; HairMaterial
-
-HairMaterial --&gt; HairShader
-
-HairShader --&gt; Game</code></pre>
-<h2 id="community-notes">Community Notes<a class="headerlink" href="#community-notes" title="Permanent link">&para;</a></h2>
-<h3 id="character-shader_7">为什么 Character Shader 看起来没有变化？<a class="headerlink" href="#character-shader_7" title="Permanent link">&para;</a></h3>
+<h2 id="community-notes">Community Notes 社区笔记<a class="headerlink" href="#community-notes" title="Permanent link">&para;</a></h2>
+<h3 id="_3">为什么我调整了着色器后看起来没有变化？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>检查：</p>
-<p>□ 是否 Reload Penumbra</p>
+<p>□ 是否 Reload Penumbra （刷新人物）</p>
 <p>□ 是否重新生成 MTRL</p>
-<p>□ Shader 是否支持该 Constant</p>
-<p>□ Shader Key 是否开启</p>
-<p>□ 是否导入正确 Texture</p>
+<p>□ Shader 是否支持该材质</p>
+<p>□ 必须的Shader Key 是否开启</p>
+<p>□ 是否导入正确 Texture，并且赋予了对应路径</p>
 <hr />
-<h3 id="_4">为什么头发法线无效？<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>通常原因：</p>
+<h2 id="references">References 索引<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dawntrail Shader Reference Table</td>
+<td>FFXIV Dawntrail Shader 通道与参数参考表</td>
+<td>https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table</td>
+</tr>
+<tr>
+<td>XIV Modding Wiki</td>
+<td>FFXIV Modding 资源与研究文档</td>
+<td>https://xivmodding.com/</td>
+</tr>
+<tr>
+<td>TexTools Reference Document</td>
+<td>TexTools 相关资源结构参考</td>
+<td>Community Documentation</td>
+</tr>
+<tr>
+<td>Penumbra Documentation</td>
+<td>Penumbra Mod Framework 文档</td>
+<td>https://github.com/xivdev/Penumbra</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p>本文档中的 Shader Channel 信息参考：</p>
 <ul>
-<li>
-<p>Hair Shader 未读取 Normal</p>
-</li>
-<li>
-<p>Alpha Channel 被覆盖</p>
-</li>
-<li>
-<p>Mask 覆盖 Specular</p>
-</li>
-<li>
-<p>面朝向错误</p>
-</li>
+<li>XIV Modding Dawntrail Shader Reference Table</li>
+<li>TexTools Reference Document</li>
+<li>FFXIV Modding Community Research</li>
 </ul>
-<hr />
-<h3 id="_5">为什么我的脸会发光？<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>通常因为：
-Emission Constant 或 Mask Alpha被错误修改。</p>
+<p>部分 Shader Channel 与 Material 行为仍在持续研究中，
+未知字段会标记为 <code>???</code>，并随着后续测试进行更新。</p>
 
 
 
@@ -3185,13 +3656,13 @@ Emission Constant 或 Mask Alpha被错误修改。</p>
         
         
           
-          <a href="../character-legacy%20shader/" class="md-footer__link md-footer__link--next" aria-label="下一页: CharacterLegacy Shader">
+          <a href="../character-legacy%20shader/" class="md-footer__link md-footer__link--next" aria-label="下一页: CharacterLegacy Shader (遗产着色器)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                CharacterLegacy Shader
+                CharacterLegacy Shader (遗产着色器)
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -202,6 +202,41 @@
 }
 
 
+/* ==================================================
+   Dark Mode Buttons
+   ================================================== */
+
+
+[data-md-color-scheme="slate"]
+.md-button {
+
+    background-color:
+        #45484D;
+
+
+    color:
+        #F0F0F0;
+
+
+    border:
+        1px solid #5A5E64;
+
+}
+
+
+
+[data-md-color-scheme="slate"]
+.md-button:hover {
+
+    background-color:
+        #5A5E64;
+
+
+    color:
+        white;
+
+}
+
 
 /* ==================================================
    Scrollbar
@@ -280,6 +315,46 @@ body::before {
 
     opacity:
         .6;
+
+}
+
+
+/* ==================================================
+   Sidebar Navigation Size
+   ================================================== */
+
+
+/* 左侧索引一级标题 */
+
+.md-nav__item--nested > .md-nav__link {
+
+    font-size:
+        1rem;
+
+    font-weight:
+        600;
+
+}
+
+
+
+/* 当前展开标题 */
+
+.md-nav__item--active > .md-nav__link {
+
+    font-weight:
+        500;
+
+}
+
+
+
+/* 子页面 */
+
+.md-nav__link {
+
+    font-size: 0.7rem;
+    letter-spacing: .02em;
 
 }
 

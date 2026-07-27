@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -279,7 +284,7 @@
   
     
   
-  Shaders
+  Shaders着色器
 
         </a>
       </li>
@@ -301,7 +306,7 @@
   
     
   
-  Material
+  Material材质
 
         </a>
       </li>
@@ -323,7 +328,7 @@
   
     
   
-  Texture
+  Texture贴图
 
         </a>
       </li>
@@ -345,7 +350,7 @@
   
     
   
-  Workflow
+  Workflow工作流程
 
         </a>
       </li>
@@ -563,7 +568,7 @@
   <span class="md-ellipsis">
     
   
-    文件结构
+    FF14的文件结构
   
 
     
@@ -659,7 +664,7 @@
   <span class="md-ellipsis">
     
   
-    Shaders
+    Shaders着色器
   
 
     
@@ -675,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Shaders
+    Shaders着色器
   
 
           </label>
@@ -790,7 +795,7 @@
   <span class="md-ellipsis">
     
   
-    Character Shader(最常用着色器)
+    Character Shader (最常用着色器)
   
 
     
@@ -818,7 +823,7 @@
   <span class="md-ellipsis">
     
   
-    CharacterLegacy Shader
+    CharacterLegacy Shader (遗产着色器)
   
 
     
@@ -1134,6 +1139,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hair Shader
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1150,6 +1173,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么头发法线无效？
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1399,7 +1450,7 @@
   <span class="md-ellipsis">
     
   
-    Material
+    Material材质
   
 
     
@@ -1421,7 +1472,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Material
+    Material材质
   
 
           </label>
@@ -1571,6 +1622,8 @@
       
         
       
+        
+      
     
     
     
@@ -1597,7 +1650,7 @@
   <span class="md-ellipsis">
     
   
-    Texture
+    Texture贴图
   
 
     
@@ -1619,12 +1672,40 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Texture
+    Texture贴图
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textures/base-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base Color
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1821,7 +1902,7 @@
   <span class="md-ellipsis">
     
   
-    Workflow
+    Workflow工作流程
   
 
     
@@ -1843,7 +1924,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Workflow
+    Workflow工作流程
   
 
           </label>
@@ -1981,6 +2062,8 @@
       
         
           
+        
+      
         
       
         
@@ -2129,6 +2212,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/materials-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    材质表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2154,6 +2265,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么头发法线无效？
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2174,7 +2304,22 @@
 
   <h1>Hair Shader</h1>
 
-
+<h3 id="_1">为什么头发法线无效？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>通常原因：</p>
+<ul>
+<li>
+<p>Hair Shader 未读取 Normal</p>
+</li>
+<li>
+<p>Alpha Channel 被覆盖</p>
+</li>
+<li>
+<p>Mask 覆盖 Specular</p>
+</li>
+<li>
+<p>面朝向错误</p>
+</li>
+</ul>
 
 
 

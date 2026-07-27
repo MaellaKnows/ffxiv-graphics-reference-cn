@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -277,7 +282,7 @@
   
     
   
-  Shaders
+  Shaders着色器
 
         </a>
       </li>
@@ -299,7 +304,7 @@
   
     
   
-  Material
+  Material材质
 
         </a>
       </li>
@@ -321,7 +326,7 @@
   
     
   
-  Texture
+  Texture贴图
 
         </a>
       </li>
@@ -343,7 +348,7 @@
   
     
   
-  Workflow
+  Workflow工作流程
 
         </a>
       </li>
@@ -563,7 +568,7 @@
   <span class="md-ellipsis">
     
   
-    文件结构
+    FF14的文件结构
   
 
     
@@ -656,7 +661,7 @@
   <span class="md-ellipsis">
     
   
-    Shaders
+    Shaders着色器
   
 
     
@@ -672,7 +677,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Shaders
+    Shaders着色器
   
 
           </label>
@@ -784,7 +789,7 @@
   <span class="md-ellipsis">
     
   
-    Character Shader(最常用着色器)
+    Character Shader (最常用着色器)
   
 
     
@@ -812,7 +817,7 @@
   <span class="md-ellipsis">
     
   
-    CharacterLegacy Shader
+    CharacterLegacy Shader (遗产着色器)
   
 
     
@@ -1376,7 +1381,7 @@
   <span class="md-ellipsis">
     
   
-    Material
+    Material材质
   
 
     
@@ -1398,7 +1403,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Material
+    Material材质
   
 
           </label>
@@ -1548,6 +1553,8 @@
       
         
       
+        
+      
     
     
     
@@ -1574,7 +1581,7 @@
   <span class="md-ellipsis">
     
   
-    Texture
+    Texture贴图
   
 
     
@@ -1596,12 +1603,40 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Texture
+    Texture贴图
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textures/base-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base Color
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1798,7 +1833,7 @@
   <span class="md-ellipsis">
     
   
-    Workflow
+    Workflow工作流程
   
 
     
@@ -1820,7 +1855,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Workflow
+    Workflow工作流程
   
 
           </label>
@@ -1968,6 +2003,8 @@
       
         
       
+        
+      
     
     
     
@@ -2037,6 +2074,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2117,6 +2156,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../materials-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    材质表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2141,6 +2208,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2160,9 +2229,437 @@
   
 
 
-  <h1>术语表</h1>
-
-
+<h1 id="_1">术语表<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>FFXIV Graphics Reference CN Terminology Glossary</p>
+</blockquote>
+<p>本章节收录 FFXIV 图形渲染、Shader、Material、Texture 与 Mod 制作相关术语。</p>
+<hr />
+<h1 id="graphics-basics">Graphics Basics（图形基础）<a class="headerlink" href="#graphics-basics" title="Permanent link">&para;</a></h1>
+<h2 id="rendering-pipeline">Rendering Pipeline<a class="headerlink" href="#rendering-pipeline" title="Permanent link">&para;</a></h2>
+<p><strong>渲染管线 / 渲染流程</strong></p>
+<p>指从模型数据输入到最终图像输出的一系列 GPU 处理流程。</p>
+<p>FFXIV 的渲染流程可以简化为：</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>English</th>
+<th>中文</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Mesh</td>
+<td>模型数据</td>
+<td>提供 Vertex、UV、Normal 等基础信息</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Vertex Shader</td>
+<td>顶点着色器</td>
+<td>处理顶点位置、骨骼动画、UV转换</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Texture Sampling</td>
+<td>纹理采样</td>
+<td>读取 Texture 数据，如 Color、Normal、Mask</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lighting Calculation</td>
+<td>光照计算</td>
+<td>根据光源、法线、材质计算表面效果</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pixel Shader</td>
+<td>像素着色器</td>
+<td>输出最终像素颜色</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Final Output</td>
+<td>最终输出</td>
+<td>显示到屏幕上的最终图像</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vertex-shader">Vertex Shader<a class="headerlink" href="#vertex-shader" title="Permanent link">&para;</a></h2>
+<p><strong>顶点着色器</strong></p>
+<p>负责处理模型顶点数据的 GPU 程序。</p>
+<p>主要功能：</p>
+<ul>
+<li>顶点位置转换</li>
+<li>骨骼动画计算</li>
+<li>UV 坐标传递</li>
+<li>法线转换</li>
+</ul>
+<hr />
+<h2 id="pixel-shader">Pixel Shader<a class="headerlink" href="#pixel-shader" title="Permanent link">&para;</a></h2>
+<p><strong>像素着色器</strong></p>
+<p>负责计算最终像素颜色的 GPU 程序。</p>
+<p>主要处理：</p>
+<ul>
+<li>纹理采样</li>
+<li>光照计算</li>
+<li>材质参数</li>
+<li>透明效果</li>
+</ul>
+<hr />
+<h2 id="lighting-calculation">Lighting Calculation<a class="headerlink" href="#lighting-calculation" title="Permanent link">&para;</a></h2>
+<p><strong>光照计算</strong></p>
+<p>根据光源、法线、材质参数以及观察方向计算最终表面颜色。</p>
+<p>影响：</p>
+<ul>
+<li>明暗</li>
+<li>高光</li>
+<li>阴影</li>
+<li>反射效果</li>
+</ul>
+<hr />
+<h1 id="shader">Shader（着色器）<a class="headerlink" href="#shader" title="Permanent link">&para;</a></h1>
+<h2 id="shader_1">Shader<a class="headerlink" href="#shader_1" title="Permanent link">&para;</a></h2>
+<p><strong>着色器</strong></p>
+<p>运行于 GPU 上，用于生成图像效果的小程序。</p>
+<p>FFXIV 常见 Shader：</p>
+<ul>
+<li>Character Shader（角色着色器）</li>
+<li>Hair Shader（头发着色器）</li>
+<li>Skin Shader（皮肤着色器）</li>
+<li>Weapon Shader（武器着色器）</li>
+</ul>
+<hr />
+<h2 id="shader-package">Shader Package<a class="headerlink" href="#shader-package" title="Permanent link">&para;</a></h2>
+<p><strong>着色器包</strong></p>
+<p>用于组织一组 Shader 程序的数据结构。</p>
+<p>FFXIV 中通常对应：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>.shpk
+</code></pre></div></p>
+<p>包含：</p>
+<ul>
+<li>Vertex Shader（顶点着色器）</li>
+<li>Pixel Shader（像素着色器）</li>
+<li>Shader Parameter（着色器参数）</li>
+</ul>
+<hr />
+<h2 id="shader-package-file-shpk">Shader Package File (.shpk)<a class="headerlink" href="#shader-package-file-shpk" title="Permanent link">&para;</a></h2>
+<p><strong>Shader 包文件</strong></p>
+<p>FFXIV 使用的 Shader 文件格式。</p>
+<p>用于定义：</p>
+<ul>
+<li>Shader Program（着色器程序）</li>
+<li>Texture Slot（纹理槽）</li>
+<li>Constant Buffer（常量缓冲区）</li>
+</ul>
+<hr />
+<h1 id="material">Material（材质）<a class="headerlink" href="#material" title="Permanent link">&para;</a></h1>
+<h2 id="material_1">Material<a class="headerlink" href="#material_1" title="Permanent link">&para;</a></h2>
+<p><strong>材质</strong></p>
+<p>在 FFXIV 中，<code>.mtrl</code> 文件负责连接模型、Shader 与 Texture。</p>
+<p>Material 不储存模型或纹理本身，而是作为渲染资源之间的连接层。</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>File Format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td><code>.mdl</code></td>
+<td>保存模型几何数据，包括 Mesh、Vertex、UV 等</td>
+</tr>
+<tr>
+<td>Material</td>
+<td><code>.mtrl</code></td>
+<td>定义模型使用的材质参数与资源引用</td>
+</tr>
+<tr>
+<td>Shader Package</td>
+<td><code>.shpk</code></td>
+<td>定义 GPU 渲染逻辑，包括 Vertex Shader 与 Pixel Shader</td>
+</tr>
+<tr>
+<td>Texture</td>
+<td><code>.tex</code></td>
+<td>提供颜色、法线、Mask 等纹理数据</td>
+</tr>
+<tr>
+<td>Color Set</td>
+<td><code>.tex</code> / Data</td>
+<td>用于装备染色与颜色控制</td>
+</tr>
+<tr>
+<td>Sampler</td>
+<td>Material Data</td>
+<td>定义 Texture 的采样方式</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="material-file-mtrl">Material File (.mtrl)<a class="headerlink" href="#material-file-mtrl" title="Permanent link">&para;</a></h2>
+<p><strong>材质文件</strong></p>
+<p>FFXIV 材质资源文件。</p>
+<p>包含：</p>
+<ul>
+<li>Shader Reference（着色器引用）</li>
+<li>Texture Reference（纹理引用）</li>
+<li>Sampler（采样器）</li>
+<li>Constant（常量参数）</li>
+<li>Color Set（颜色集）</li>
+</ul>
+<hr />
+<h2 id="material-constant">Material Constant<a class="headerlink" href="#material-constant" title="Permanent link">&para;</a></h2>
+<p><strong>材质常量</strong></p>
+<p>储存在材质中的数值参数。</p>
+<p>例如：</p>
+<ul>
+<li>Specular（高光）</li>
+<li>Roughness（粗糙度）</li>
+<li>Emissive（自发光）</li>
+</ul>
+<hr />
+<h2 id="shader-key">Shader Key<a class="headerlink" href="#shader-key" title="Permanent link">&para;</a></h2>
+<p><strong>着色器键值</strong></p>
+<p>用于控制 Shader 功能和变体的参数。</p>
+<p>用于决定：</p>
+<ul>
+<li>Shader Variant（着色器变体）</li>
+<li>Feature Enable（功能启用）</li>
+<li>Rendering Path（渲染路径）</li>
+</ul>
+<hr />
+<h1 id="texture">Texture（纹理）<a class="headerlink" href="#texture" title="Permanent link">&para;</a></h1>
+<h2 id="texture_1">Texture<a class="headerlink" href="#texture_1" title="Permanent link">&para;</a></h2>
+<p><strong>纹理</strong></p>
+<p>用于描述模型表面信息的图像数据。</p>
+<p>FFXIV 常见格式：</p>
+<p>.tex
+.dds</p>
+<hr />
+<h2 id="texture-reference">Texture Reference<a class="headerlink" href="#texture-reference" title="Permanent link">&para;</a></h2>
+<p><strong>纹理引用</strong></p>
+<p>材质中记录的纹理路径和连接信息。</p>
+<p><code>.mtrl</code> 不保存纹理本身，而是引用外部 <code>.tex</code> 文件。</p>
+<hr />
+<h2 id="base-color-texture">Base Color Texture<a class="headerlink" href="#base-color-texture" title="Permanent link">&para;</a></h2>
+<p><strong>基础颜色纹理</strong></p>
+<p>储存物体主要颜色信息。</p>
+<p>也称：</p>
+<ul>
+<li>Diffuse Texture（漫反射纹理）</li>
+<li>Albedo Texture（反照率纹理）</li>
+</ul>
+<hr />
+<h2 id="normal-map">Normal Map<a class="headerlink" href="#normal-map" title="Permanent link">&para;</a></h2>
+<p><strong>法线贴图</strong></p>
+<p>用于模拟表面细节方向变化。</p>
+<p>作用：</p>
+<ul>
+<li>增加表面细节</li>
+<li>影响光照计算</li>
+<li>模拟凹凸效果</li>
+</ul>
+<hr />
+<h2 id="tangent-space-normal-map">Tangent Space Normal Map<a class="headerlink" href="#tangent-space-normal-map" title="Permanent link">&para;</a></h2>
+<p><strong>切线空间法线贴图</strong></p>
+<p>使用模型切线空间记录表面方向信息的法线贴图。</p>
+<hr />
+<h2 id="mask-texture">Mask Texture<a class="headerlink" href="#mask-texture" title="Permanent link">&para;</a></h2>
+<p><strong>遮罩纹理</strong></p>
+<p>通过颜色通道控制不同区域效果的纹理。</p>
+<p>例如：</p>
+<ul>
+<li>染色区域</li>
+<li>透明区域</li>
+<li>材质区域</li>
+</ul>
+<hr />
+<h2 id="multi-map">Multi Map<a class="headerlink" href="#multi-map" title="Permanent link">&para;</a></h2>
+<p><strong>多功能纹理</strong></p>
+<p>FFXIV 中常见的复合数据纹理。</p>
+<p>通常储存：</p>
+<ul>
+<li>Specular（高光）</li>
+<li>Roughness（粗糙度）</li>
+<li>Mask（遮罩）</li>
+</ul>
+<hr />
+<h2 id="color-set">Color Set<a class="headerlink" href="#color-set" title="Permanent link">&para;</a></h2>
+<p><strong>颜色集</strong></p>
+<p>FFXIV 特有的颜色控制系统。</p>
+<p>用于：</p>
+<ul>
+<li>装备染色</li>
+<li>区域颜色变化</li>
+</ul>
+<hr />
+<h1 id="texture-channel">Texture Channel（纹理通道）<a class="headerlink" href="#texture-channel" title="Permanent link">&para;</a></h1>
+<h2 id="channel">Channel<a class="headerlink" href="#channel" title="Permanent link">&para;</a></h2>
+<p><strong>通道</strong></p>
+<p>纹理中的独立数据层。</p>
+<p>包括：</p>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red Channel (R)</td>
+<td>红色通道</td>
+</tr>
+<tr>
+<td>Green Channel (G)</td>
+<td>绿色通道</td>
+</tr>
+<tr>
+<td>Blue Channel (B)</td>
+<td>蓝色通道</td>
+</tr>
+<tr>
+<td>Alpha Channel (A)</td>
+<td>Alpha 通道</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rgba">RGBA<a class="headerlink" href="#rgba" title="Permanent link">&para;</a></h2>
+<p><strong>颜色通道组合</strong></p>
+<p>由：</p>
+<ul>
+<li>Red（红）</li>
+<li>Green（绿）</li>
+<li>Blue（蓝）</li>
+<li>Alpha（透明度）</li>
+</ul>
+<p>组成。</p>
+<hr />
+<h1 id="rendering">Rendering（渲染）<a class="headerlink" href="#rendering" title="Permanent link">&para;</a></h1>
+<h2 id="specular">Specular<a class="headerlink" href="#specular" title="Permanent link">&para;</a></h2>
+<p><strong>高光</strong></p>
+<p>描述光线在表面的反射强度。</p>
+<hr />
+<h2 id="roughness">Roughness<a class="headerlink" href="#roughness" title="Permanent link">&para;</a></h2>
+<p><strong>粗糙度</strong></p>
+<p>控制表面反射扩散程度。</p>
+<p>数值越低：</p>
+<ul>
+<li>表面越光滑</li>
+<li>高光越集中</li>
+</ul>
+<hr />
+<h2 id="emissive">Emissive<a class="headerlink" href="#emissive" title="Permanent link">&para;</a></h2>
+<p><strong>自发光</strong></p>
+<p>不依赖外部光源产生的亮度。</p>
+<p>常用于：</p>
+<ul>
+<li>魔法效果</li>
+<li>发光武器</li>
+<li>眼睛效果</li>
+</ul>
+<hr />
+<h2 id="ambient-occlusion-ao">Ambient Occlusion (AO)<a class="headerlink" href="#ambient-occlusion-ao" title="Permanent link">&para;</a></h2>
+<p><strong>环境光遮蔽</strong></p>
+<p>模拟物体接触区域产生的阴影。</p>
+<hr />
+<h2 id="opacity">Opacity<a class="headerlink" href="#opacity" title="Permanent link">&para;</a></h2>
+<p><strong>不透明度</strong></p>
+<p>控制材质透明程度。</p>
+<hr />
+<h1 id="moddingmod">Modding（Mod 制作）<a class="headerlink" href="#moddingmod" title="Permanent link">&para;</a></h1>
+<h2 id="mod">Mod<a class="headerlink" href="#mod" title="Permanent link">&para;</a></h2>
+<p><strong>修改文件 / 模组</strong></p>
+<p>通过修改游戏资源改变视觉表现。</p>
+<p>由于社区相对成熟，一般我们使用XMA的筛选分类来进行mod的分类。</p>
+<p>例如：Gear，Face，Mount等。</p>
+<hr />
+<h2 id="penumbra-pen">Penumbra / pen<a class="headerlink" href="#penumbra-pen" title="Permanent link">&para;</a></h2>
+<p><strong>FFXIV Mod 管理框架</strong></p>
+<p>用于：</p>
+<ul>
+<li>Mod 加载</li>
+<li>优先级管理</li>
+<li>资源替换</li>
+</ul>
+<hr />
+<h2 id="textools-tt">TexTools / tt<a class="headerlink" href="#textools-tt" title="Permanent link">&para;</a></h2>
+<p><strong>FFXIV 资源编辑工具</strong></p>
+<p>用于：</p>
+<ul>
+<li>解包</li>
+<li>查看资源</li>
+<li>编辑纹理</li>
+</ul>
+<hr />
+<h2 id="dalamud">Dalamud / 卫月 / 月<a class="headerlink" href="#dalamud" title="Permanent link">&para;</a></h2>
+<p><strong>FFXIV 插件框架</strong></p>
+<p>用于加载第三方插件。</p>
+<hr />
+<h1 id="file-formats">File Formats（文件格式）<a class="headerlink" href="#file-formats" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model (.mdl)</td>
+<td>模型文件</td>
+<td>保存模型数据</td>
+</tr>
+<tr>
+<td>Material (.mtrl)</td>
+<td>材质文件</td>
+<td>保存材质信息</td>
+</tr>
+<tr>
+<td>Texture (.tex)</td>
+<td>纹理文件</td>
+<td>FFXIV 专用纹理格式</td>
+</tr>
+<tr>
+<td>DDS</td>
+<td>DirectDraw Surface</td>
+<td>常见 GPU 纹理格式</td>
+</tr>
+<tr>
+<td>Animation (.pap)</td>
+<td>动画文件</td>
+<td>保存动画数据</td>
+</tr>
+<tr>
+<td>VFX (.avfx)</td>
+<td>特效文件</td>
+<td>保存视觉效果</td>
+</tr>
+<tr>
+<td>Skeleton (.sklb)</td>
+<td>骨骼文件</td>
+<td>保存骨骼结构</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="references">References（参考资料）<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
+<ul>
+<li>XIV Modding Wiki</li>
+<li>TexTools Documentation（TexTools 文档）</li>
+<li>Penumbra Documentation（Penumbra 文档）</li>
+<li>FFXIV Shader Research Community（FFXIV Shader 研究社区）</li>
+</ul>
 
 
 
@@ -2200,7 +2697,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: Index">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: GRC Logo">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2210,7 +2707,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Index
+                GRC Logo
               </div>
             </div>
           </a>

@@ -29,7 +29,7 @@
     
     
       
-        <title>CharacterLegacy Shader - FFXIV Graphics Reference CN</title>
+        <title>CharacterLegacy Shader (遗产着色器) - FFXIV Graphics Reference CN</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#character-legacy-shader" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CharacterLegacy Shader
+              CharacterLegacy Shader (遗产着色器)
             
           </span>
         </div>
@@ -279,7 +284,7 @@
   
     
   
-  Shaders
+  Shaders着色器
 
         </a>
       </li>
@@ -301,7 +306,7 @@
   
     
   
-  Material
+  Material材质
 
         </a>
       </li>
@@ -323,7 +328,7 @@
   
     
   
-  Texture
+  Texture贴图
 
         </a>
       </li>
@@ -345,7 +350,7 @@
   
     
   
-  Workflow
+  Workflow工作流程
 
         </a>
       </li>
@@ -563,7 +568,7 @@
   <span class="md-ellipsis">
     
   
-    文件结构
+    FF14的文件结构
   
 
     
@@ -659,7 +664,7 @@
   <span class="md-ellipsis">
     
   
-    Shaders
+    Shaders着色器
   
 
     
@@ -675,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Shaders
+    Shaders着色器
   
 
           </label>
@@ -790,7 +795,7 @@
   <span class="md-ellipsis">
     
   
-    Character Shader(最常用着色器)
+    Character Shader (最常用着色器)
   
 
     
@@ -817,6 +822,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CharacterLegacy Shader (遗产着色器)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -825,7 +850,7 @@
   <span class="md-ellipsis">
     
   
-    CharacterLegacy Shader
+    CharacterLegacy Shader (遗产着色器)
   
 
     
@@ -834,6 +859,97 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        介绍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendering Pipeline 渲染流水线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Structure 材质结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Material Structure 材质结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shader-package-shpk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shader Package 着色器包（.shpk文件）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texture References 纹理引用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Constants 材质常量
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1399,7 +1515,7 @@
   <span class="md-ellipsis">
     
   
-    Material
+    Material材质
   
 
     
@@ -1421,7 +1537,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Material
+    Material材质
   
 
           </label>
@@ -1571,6 +1687,8 @@
       
         
       
+        
+      
     
     
     
@@ -1597,7 +1715,7 @@
   <span class="md-ellipsis">
     
   
-    Texture
+    Texture贴图
   
 
     
@@ -1619,12 +1737,40 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Texture
+    Texture贴图
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textures/base-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base Color
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1821,7 +1967,7 @@
   <span class="md-ellipsis">
     
   
-    Workflow
+    Workflow工作流程
   
 
     
@@ -1843,7 +1989,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Workflow
+    Workflow工作流程
   
 
           </label>
@@ -1981,6 +2127,8 @@
       
         
           
+        
+      
         
       
         
@@ -2129,6 +2277,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/materials-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    材质表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2153,6 +2329,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        介绍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendering Pipeline 渲染流水线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Structure 材质结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Material Structure 材质结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shader-package-shpk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shader Package 着色器包（.shpk文件）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texture References 纹理引用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Constants 材质常量
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2172,9 +2430,432 @@
   
 
 
-  <h1>CharacterLegacy Shader</h1>
-
-
+<h1 id="character-legacy-shader">Character Legacy Shader<a class="headerlink" href="#character-legacy-shader" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>角色遗产着色器，一款为适配7.0画质更新前装备而产生的着色器。</p>
+<p>由于7.0的画质升级，本着色器已经不推荐使用。</p>
+</blockquote>
+<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><code>Character Legacy Shader</code> 是 Final Fantasy XIV 在 Dawntrail（7.0）之前长期使用的角色渲染系统。</p>
+<p>该 Shader 系统负责处理游戏中绝大多数角色相关材质，包括：</p>
+<ul>
+<li>Character Body</li>
+<li>Face</li>
+<li>Hair</li>
+<li>Eye</li>
+<li>Equipment Character Material</li>
+</ul>
+<p>Legacy Character Shader 主要服务于 1.0 重制后的 ARR ～ Endwalker（2.0 - 6.x）时代角色渲染。</p>
+<p>虽然 Dawntrail 引入了新的 Character Shader Pipeline，但大量旧模型、装备以及 Mod 资源仍然基于 Legacy Shader 工作。</p>
+<hr />
+<h2 id="rendering-pipeline">Rendering Pipeline 渲染流水线<a class="headerlink" href="#rendering-pipeline" title="Permanent link">&para;</a></h2>
+<p>Legacy Character Shader 的基础渲染流程：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>            Mesh Data 网格数据
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                    |
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                    v
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>         Vertex Shader 顶点着色器
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                    |
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                    v
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        +----------------------+
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        | Texture Sampling     |
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        |                      |
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        | Base Color           |
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        | Normal Map           |
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        | Multi Map            |
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        +----------------------+
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                    |
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                    v
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        Material Parameters 材质计算
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                    |
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                    v
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        Lighting Calculation 光照计算
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                    |
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>                    v
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            Pixel Shader 像素渲染
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                    |
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                    v
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>            Final Output 最终输出
+</code></pre></div>
+<p>主要阶段：</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertex Shader</td>
+<td>处理顶点位置、骨骼动画、UV</td>
+</tr>
+<tr>
+<td>Texture Sampling</td>
+<td>读取角色纹理数据</td>
+</tr>
+<tr>
+<td>Material Parameter</td>
+<td>控制材质属性</td>
+</tr>
+<tr>
+<td>Lighting</td>
+<td>计算光照与反射</td>
+</tr>
+<tr>
+<td>Pixel Shader</td>
+<td>输出最终颜色</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Vertex Shader = 决定模型如何存在于世界中</li>
+<li>Lighting Calculation = 决定光如何作用于模型</li>
+<li>Pixel Shader = 决定最终每个像素显示什么</li>
+</ul>
+<hr />
+<h2 id="material-structure">Material Structure 材质结构<a class="headerlink" href="#material-structure" title="Permanent link">&para;</a></h2>
+<p>Legacy Character Shader 使用 <code>.mtrl</code> 文件定义材质。</p>
+<p>Material 文件主要包含：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.mtrl
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> |
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> +-- Shader Package
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> |
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> +-- Texture References
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a> |
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> +-- Sampler Settings
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a> |
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a> +-- Material Constants
+</code></pre></div>
+<p>其中：</p>
+<h3 id="shader-package-shpk">Shader Package 着色器包（.shpk文件）<a class="headerlink" href="#shader-package-shpk" title="Permanent link">&para;</a></h3>
+<p>定义当前材质使用的 Shader。</p>
+<p>例如：</p>
+<ul>
+<li>Character——最常见使用的着色器</li>
+<li>Hair——头发、睫毛、衣物毛发等使用的着色器</li>
+<li>Skin——皮肤、面部</li>
+<li>Iris——眼睛着色器</li>
+</ul>
+<p>不同 Shader Package 会决定：</p>
+<ul>
+<li>可使用的 Texture</li>
+<li>Constant 参数</li>
+<li>渲染方式</li>
+</ul>
+<hr />
+<h2 id="texture-references">Texture References 纹理引用<a class="headerlink" href="#texture-references" title="Permanent link">&para;</a></h2>
+<p>通常，<code>.mtrl</code> 中保存的是纹理路径和材质常量。</p>
+<p>常见：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.tex
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>.dds
+</code></pre></div>
+<p>例如：</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>chara/equipment/e0834/texture/
+</code></pre></div>
+等一系列材质路径。</p>
+<hr />
+<h2 id="material-constants">Material Constants 材质常量<a class="headerlink" href="#material-constants" title="Permanent link">&para;</a></h2>
+<p>材质常量用于控制着色器（shader）参数。</p>
+<p>包括：</p>
+<ul>
+<li>Specular 强度</li>
+<li>Roughness</li>
+<li>Emissive</li>
+<li>Color Adjustment</li>
+</ul>
+<hr />
+<h1 id="texture-inputs">Texture Inputs<a class="headerlink" href="#texture-inputs" title="Permanent link">&para;</a></h1>
+<p>Legacy Character Shader 主要依赖以下纹理。</p>
+<hr />
+<hr />
+<h2 id="normal-map">Normal Map 法线/法向贴图<a class="headerlink" href="#normal-map" title="Permanent link">&para;</a></h2>
+<p>Normal Map 主要用于在低模上模拟高模的表面细节。</p>
+<p>FFXIV 使用：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Tangent Space Normal 切线空间法线
+</code></pre></div>
+<p>通常：</p>
+<p>R通道:X Component 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>x方向数据，通常表现为从左往右或从右往左看的效果。
+</code></pre></div></p>
+<p>G通道:
+Y Component 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Y方向数据，通常表现为从上往下或从下往上看的效果。
+</code></pre></div></p>
+<p>B通道 B Channel:
+本通道的使用效果非常多变，具体取决于 Shader 实现。</p>
+<p>B通道的使用效果可以考虑查找材质表。</p>
+<p>在渲染阶段，Shader 会将纹理数据转换为完整 Normal Vector。</p>
+<hr />
+<h1 id="multi-map">Multi Map<a class="headerlink" href="#multi-map" title="Permanent link">&para;</a></h1>
+<p>Multi Map 是 Legacy Character Shader 中非常重要的纹理。</p>
+<p>通常储存：</p>
+<ul>
+<li>Specular</li>
+<li>Roughness</li>
+<li>Material Mask</li>
+<li>Dye Information</li>
+</ul>
+<p>常见结构：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>RGBA
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>R : Specular
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>G : Roughness
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>B : Material Information
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>A : Mask
+</code></pre></div>
+<p>不同材质类型可能存在差异。</p>
+<hr />
+<h1 id="character-parts">Character Parts<a class="headerlink" href="#character-parts" title="Permanent link">&para;</a></h1>
+<h2 id="face-shader">Face Shader<a class="headerlink" href="#face-shader" title="Permanent link">&para;</a></h2>
+<p>Face Shader 负责角色面部渲染。</p>
+<p>包括：</p>
+<ul>
+<li>Face Texture</li>
+<li>Eye</li>
+<li>Eyebrow</li>
+<li>Eyelash</li>
+<li>Lip</li>
+</ul>
+<p>常见文件：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>face_base.tex
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>face_normal.tex
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>face_mask.tex
+</code></pre></div>
+<p>Face Shader 通常需要处理：</p>
+<ul>
+<li>皮肤光照</li>
+<li>面部细节</li>
+<li>透明区域</li>
+</ul>
+<hr />
+<h1 id="body-shader">Body Shader<a class="headerlink" href="#body-shader" title="Permanent link">&para;</a></h1>
+<p>Body Shader 用于角色身体。</p>
+<p>负责：</p>
+<ul>
+<li>Skin Color</li>
+<li>Skin Normal</li>
+<li>Body Mask</li>
+</ul>
+<p>常见：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>body_base.tex
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>body_normal.tex
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>body_multi.tex
+</code></pre></div>
+<p>影响：</p>
+<ul>
+<li>肌肉表现</li>
+<li>皮肤粗糙度</li>
+<li>高光强度</li>
+</ul>
+<hr />
+<h1 id="hair-shader">Hair Shader<a class="headerlink" href="#hair-shader" title="Permanent link">&para;</a></h1>
+<p>Hair Shader 是 Legacy Character Shader 中较特殊的部分。</p>
+<p>主要处理：</p>
+<ul>
+<li>发色</li>
+<li>Alpha Transparency</li>
+<li>Hair Highlight</li>
+</ul>
+<p>常见纹理：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hair_base.tex
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>hair_normal.tex
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>hair_mask.tex
+</code></pre></div>
+<hr />
+<h2 id="hair-alpha">Hair Alpha<a class="headerlink" href="#hair-alpha" title="Permanent link">&para;</a></h2>
+<p>头发通常使用 Alpha 控制透明区域。</p>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Alpha = 1
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>完全显示
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>Alpha = 0
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>完全透明
+</code></pre></div>
+<p>因此头发 Mod 制作通常需要处理：</p>
+<ul>
+<li>Alpha Mask</li>
+<li>Normal Direction</li>
+<li>Highlight</li>
+</ul>
+<hr />
+<h1 id="eye-shader">Eye Shader<a class="headerlink" href="#eye-shader" title="Permanent link">&para;</a></h1>
+<p>Eye Shader 负责眼睛材质。</p>
+<p>常见纹理：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>eye_base.tex
+</code></pre></div>
+<p>主要控制：</p>
+<ul>
+<li>Iris</li>
+<li>Pupil</li>
+<li>Highlight</li>
+</ul>
+<p>眼睛通常结合：</p>
+<ul>
+<li>Base Texture</li>
+<li>Mask</li>
+<li>Emissive</li>
+</ul>
+<p>实现特殊效果。</p>
+<hr />
+<h1 id="lighting-model">Lighting Model<a class="headerlink" href="#lighting-model" title="Permanent link">&para;</a></h1>
+<p>Legacy Character Shader 使用传统角色光照模型。</p>
+<p>主要包含：</p>
+<h2 id="diffuse">Diffuse<a class="headerlink" href="#diffuse" title="Permanent link">&para;</a></h2>
+<p>基础漫反射。</p>
+<p>决定：</p>
+<ul>
+<li>基础颜色</li>
+<li>光照响应</li>
+</ul>
+<hr />
+<h2 id="specular">Specular<a class="headerlink" href="#specular" title="Permanent link">&para;</a></h2>
+<p>控制高光。</p>
+<p>影响：</p>
+<ul>
+<li>皮肤湿润感</li>
+<li>头发亮度</li>
+<li>金属反射</li>
+</ul>
+<hr />
+<h2 id="roughness">Roughness<a class="headerlink" href="#roughness" title="Permanent link">&para;</a></h2>
+<p>控制表面粗糙程度。</p>
+<p>低 Roughness：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Sharp Highlight
+</code></pre></div>
+<p>高 Roughness：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Soft Reflection
+</code></pre></div>
+<hr />
+<h2 id="emissive">Emissive<a class="headerlink" href="#emissive" title="Permanent link">&para;</a></h2>
+<p>自发光。</p>
+<p>用于：</p>
+<ul>
+<li>眼睛</li>
+<li>特殊装备</li>
+<li>魔法效果</li>
+</ul>
+<hr />
+<h1 id="dye-system">Dye System<a class="headerlink" href="#dye-system" title="Permanent link">&para;</a></h1>
+<p>FFXIV 染色系统依赖：</p>
+<ul>
+<li>Multi Map</li>
+<li>Color Set</li>
+<li>Material Parameter</li>
+</ul>
+<p>基本流程：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Texture
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>   |
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>   v
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Mask
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>   |
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>   v
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>Dye Color
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>   |
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>   v
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>Final Material
+</code></pre></div>
+<p>Mask 决定哪些区域可以被染色。</p>
+<hr />
+<h1 id="legacy-shader-modding">Legacy Shader Modding<a class="headerlink" href="#legacy-shader-modding" title="Permanent link">&para;</a></h1>
+<p>Legacy Character Shader 仍然是目前 FFXIV Mod 制作的重要基础。</p>
+<p>常见修改：</p>
+<h2 id="texture-replacement">Texture Replacement<a class="headerlink" href="#texture-replacement" title="Permanent link">&para;</a></h2>
+<p>替换：</p>
+<ul>
+<li>Face Texture</li>
+<li>Body Texture</li>
+<li>Eye Texture</li>
+<li>Hair Texture</li>
+</ul>
+<hr />
+<h2 id="normal-editing">Normal Editing<a class="headerlink" href="#normal-editing" title="Permanent link">&para;</a></h2>
+<p>修改：</p>
+<ul>
+<li>Skin Detail</li>
+<li>Hair Direction</li>
+<li>Surface Detail</li>
+</ul>
+<hr />
+<h2 id="material-editing">Material Editing<a class="headerlink" href="#material-editing" title="Permanent link">&para;</a></h2>
+<p>修改：</p>
+<ul>
+<li>Specular</li>
+<li>Roughness</li>
+<li>Transparency</li>
+<li>Emissive</li>
+</ul>
+<p>工具：</p>
+<ul>
+<li>TexTools</li>
+<li>Penumbra</li>
+<li>Photoshop</li>
+<li>Materialize</li>
+<li>Blender</li>
+</ul>
+<hr />
+<h1 id="legacy-vs-dawntrail-character-shader">Legacy vs Dawntrail Character Shader<a class="headerlink" href="#legacy-vs-dawntrail-character-shader" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>Legacy Character Shader</th>
+<th>Dawntrail Character Shader</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用版本</td>
+<td>ARR - Endwalker</td>
+<td>Dawntrail</td>
+</tr>
+<tr>
+<td>光照模型</td>
+<td>传统模型</td>
+<td>更新模型</td>
+</tr>
+<tr>
+<td>Skin Rendering</td>
+<td>基础皮肤表现</td>
+<td>改进皮肤表现</td>
+</tr>
+<tr>
+<td>Hair</td>
+<td>Alpha Hair</td>
+<td>更复杂发丝处理</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>简单参数</td>
+<td>更多控制参数</td>
+</tr>
+<tr>
+<td>Mod 兼容</td>
+<td>大量旧资源</td>
+<td>新资源</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="known-limitations">Known Limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h1>
+<p>Legacy Character Shader 存在一些限制：</p>
+<ul>
+<li>皮肤真实感有限</li>
+<li>头发透明排序问题</li>
+<li>光照表现较旧</li>
+<li>部分材质依赖固定参数</li>
+</ul>
+<p>因此 Dawntrail Shader 对角色渲染进行了重新设计。</p>
+<hr />
+<h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
+<ul>
+<li>XIV Modding Wiki</li>
+<li>TexTools Documentation</li>
+<li>Penumbra Documentation</li>
+<li>FFXIV Shader Research Community</li>
+</ul>
 
 
 
@@ -2212,7 +2893,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../character-shaders/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Character Shader(最常用着色器)">
+          <a href="../character-shaders/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Character Shader (最常用着色器)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2222,7 +2903,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Character Shader(最常用着色器)
+                Character Shader (最常用着色器)
               </div>
             </div>
           </a>
