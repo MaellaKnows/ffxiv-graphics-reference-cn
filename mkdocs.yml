@@ -59,7 +59,7 @@ nav:
       - FF14的文件结构: getting-started/folder-structure.md
       - 名词解释: getting-started/glossary.md
 
-  - Shaders着色器:
+  - Shaders-着色器:
       - Shader Reference: shaders/shader-reference.md
 
       - Character Shaders:
@@ -82,15 +82,23 @@ nav:
       - Additional Data:
           - Additional Data: shaders/additional-data.md
 
-  - Material材质:
-      - materials/index.md
+  - 入门:
+      - 入门概览: getting-started/index.md
+      - 安装环境: getting-started/installation.md
+      - FF14的文件结构: getting-started/folder-structure.md
+      - 名词解释: getting-started/glossary.md
+
+
+  - Material-材质:
+      - 材质概览: materials/index.md
       - MTRL 格式: materials/mtrl-format.md
       - Material Constants: materials/constants.md
       - Sampler: materials/sampler.md
       - Shader Keys: materials/shader-keys.md
 
-  - Texture贴图:
-      - textures/index.md
+
+  - Texture-贴图:
+      - 贴图概览: textures/index.md
       - Base Color: textures/base-color.md
       - Normal Map: textures/normal-map.md
       - Mask Map: textures/mask-map.md
@@ -98,23 +106,26 @@ nav:
       - Color Set: textures/color-set.md
       - Eye Textures: textures/eye-textures.md
 
-  - Workflow工作流程:
-      - workflows/index.md
+
+  - Workflow-工作流程:
+      - 工作流程概览: workflows/index.md
       - Blender: workflows/blender.md
       - TexTools: workflows/textools.md
       - Penumbra: workflows/penumbra.md
       - 故障排除: workflows/troubleshooting.md
 
-  - Mod 制作:
-      - modding/index.md
+
+  - Mod-制作:
+      - Mod制作主页: modding/main.md
       - Mod制作基础: modding/modding-basics.md
       - Mod制作工具: modding/modding-tools.md
       - Mod制作教程: modding/modding-tutorials.md
       - Mod制作资源: modding/modding-resources.md
       - 其他外部链接: modding/other-links.md
 
+
   - 附录:
-      - appendix/index.md
+      - 附录概览: appendix/index.md
       - 术语表: appendix/glossary.md
       - 更新日志: appendix/changelog.md
       - 参考资料: appendix/references.md
