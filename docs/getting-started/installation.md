@@ -35,11 +35,11 @@ Dalamud为所有第三方插件提供了运行所需的基础环境、API（应�
 
 Dalamud负责管理所有插件的加载、运行、更新和卸载，确保多个插件能够稳定地共存，互不干扰。
 
-如何安装：下载xivlaucher (卫月加载器)
+如何安装：从蓝月官网下载xivlaucher (卫月加载器)
 
 <hr style="border: 0; height: 1px; background: #555;"> 
 
-## 图形制作软件
+## 制作软件
 
 ### Blender
 
@@ -70,7 +70,7 @@ Dalamud负责管理所有插件的加载、运行、更新和卸载，确保多�
 
 <hr style="border: 0; height: 1px; background: #555;"> 
 
-## 图像处理软件
+## 贴图处理制作软件
 
 ### Photoshop
 
@@ -117,15 +117,3 @@ PBR贴图
 ✔ TexTools Blender Tools
 
 以上插件请自行寻找安装方式
-
-**文件格式说明**
-
-
-| 格式 | 用途 |
-|------|-----|  
-| .mdl | 模型 |
-| .mtrl | 材质 |
-| .tex | FF14贴图 |
-| .dds | 贴图文件 |
-| .pap | 动作动画 |
-| .avfx | 特效 |

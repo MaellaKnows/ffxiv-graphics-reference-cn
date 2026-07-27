@@ -1,36 +1,59 @@
-/* ================================================
-   FFXIV Graphics Reference CN
-   Morandi Theme
-================================================ */
+/* ========== GRC 高级灰主题 ========== */
 
-:root{
+/* Light Mode */
+[data-md-color-scheme="default"] {
+    /* 顶部导航栏 */
+    --md-primary-fg-color: #3d3f44;
+    --md-primary-fg-color--light: #676c76;
+    --md-primary-fg-color--dark: #555962;
 
-    /* Primary */
+    /* 页面背景 */
+    --md-default-bg-color: #F5F5F3;
+    --md-default-fg-color: #2D3137;
 
-    --md-primary-fg-color:#5C6872;
-    --md-primary-fg-color--light:#74818B;
-    --md-primary-fg-color--dark:#4A555D;
+    /* 卡片背景 */
+    --md-code-bg-color: #ECEDEA;
+}
 
-    /* Accent */
+/* Dark Mode */
+[data-md-color-scheme="slate"] {
+    /* 顶部导航栏 */
+    --md-primary-fg-color: #2A2D31;
+    --md-primary-fg-color--light: #3A3E43;
+    --md-primary-fg-color--dark: #1B1D20;
 
-    --md-accent-fg-color:#91A8B8;
+    /* 页面背景 */
+    --md-default-bg-color: #1D1F21;
+    --md-default-fg-color: #ECECEC;
 
-    /* Background */
+    /* 卡片背景 */
+    --md-code-bg-color: #26292D;
+}
 
-    --md-default-bg-color:#F6F5F3;
+/* ========== 按钮美化 ========== */
+.md-button {
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
 
-    /* Content */
+.md-button:hover {
+    transform: translateY(-1px);
+}
 
-    --md-default-fg-color:#2D3135;
+/* ========== 卡片美化 ========== */
+.md-typeset .grid.cards > ul > li {
+    border-radius: 16px;
+    border: 1px solid #D8DBDF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
 
-    /* Code */
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+    border-color: #45484D;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
 
-    --md-code-bg-color:#ECE9E5;
-
-    --md-code-fg-color:#2E3337;
-
-    /* Links */
-
-    --md-typeset-a-color:#718EA5;
-
+/* ========== 顶部导航栏半透明效果 ========== */
+.md-header {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
