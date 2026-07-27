@@ -10,38 +10,36 @@ repo_url: https://github.com/MaellaKnows/ffxiv-graphics-reference-cn
 theme:
   name: material
   language: zh
+  custom_dir: overrides
 
-icon:
+  icon:
     repo: fontawesome/brands/github
 
-palette:
-  - media: "(prefers-color-scheme: light)"
-    scheme: default
-    toggle:
-      icon: material/brightness-7
-      name: 切换至暗色模式
-  - media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    toggle:
-      icon: material/brightness-4
-      name: 切换至亮色模式
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换至暗色模式
 
-    features:
-  # 导航
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换至亮色模式
+
+  features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
 
-    # 目录
     - toc.follow
 
-    # 搜索
     - search.highlight
     - search.suggest
     - search.share
 
-    # 内容
     - content.code.copy
     - content.tabs.link
 
@@ -117,7 +115,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !! python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
   - pymdownx.highlight:
       anchor_linenums: true
@@ -144,8 +142,8 @@ extra:
       - icon: fontawesome/brands/discord
         link: https://discord.gg/MaKs9YcmK9
 
-      - icon: fontawesome/brands/blender
-        link: https://www.blender.org/
+      - icon: blender
+        link: https://www.blender.org
 
       - icon: fontawesome/solid/cube
         link: https://www.xivmodarchive.com/
