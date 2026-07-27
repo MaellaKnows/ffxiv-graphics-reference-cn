@@ -7,9 +7,9 @@
 
 ## Character Shader
 
-![Character Shader](..assets/images/material-table/character-shader.png){ width="800" }
-![Character Shader2](..assets/images/material-table/character-2.png)
-![Character Shader3](..assets/images/material-table/character-3.png)
+![Character Shader](../assets/images/material-table/character-shader.png){ width="800" }
+![Character Shader2](../assets/images/material-table/character-2.png)
+![Character Shader3](../assets/images/material-table/character-3.png)
 
 这是用于大多数你可以模组的物品（装备、仆从、坐骑、武器）的标准着色器，这些物品不是与角色创建器绑定的选项。这个着色器可能是你最常查看的。
 
@@ -30,9 +30,9 @@
 
 ## Character Legacy Shader
 
-![Character Legacy](..assets/images/material-table/legacy.png){ width="800" }
-![Character Legacy2](..assets/images/material-table/legacy-2.png)
-![Character Legacy3](..assets/images/material-table/legacy-3.png)
+![Character Legacy](../assets/images/material-table/legacy.png){ width="800" }
+![Character Legacy2](../assets/images/material-table/legacy-2.png)
+![Character Legacy3](../assets/images/material-table/legacy-3.png)
 
 ---
 
@@ -42,9 +42,9 @@
 
 ## Skin Shader
 
-![Skin Shader](..assets/images/material-table/skin.png){ width="800" }
-![Skin Shader2](..assets/images/material-table/skin-2.png)
-![Skin Shader3](..assets/images/material-table/skin-3.png)
+![Skin Shader](../assets/images/material-table/skin.png){ width="800" }
+![Skin Shader2](../assets/images/material-table/skin-2.png)
+![Skin Shader3](../assets/images/material-table/skin-3.png)
 
 ---
 
@@ -72,9 +72,9 @@
 
 ## Hair Shader
 
-![Hair Shader](..assets/images/material-table/hair.png){ width="800" }
-![Hair Shader2](..assets/images/material-table/hair-1.png)
-![Hair Shader3](..assets/images/material-table/hair-2.png)
+![Hair Shader](../assets/images/material-table/hair.png){ width="800" }
+![Hair Shader2](../assets/images/material-table/hair-1.png)
+![Hair Shader3](../assets/images/material-table/hair-2.png)
 
 ---
 
@@ -86,7 +86,7 @@
 
 ## iris Shader
 
-![iris Shader](..assets/images/material-table/iris.png){ width="800" }
+![iris Shader](../assets/images/material-table/iris.png){ width="800" }
 
 ---
 这是虹膜，或新的眼睛着色器。这个着色器没有适用于玩家的旧版本，因此所有眼睛模组都必须通过 Loose Texture Compiler 或 Textools 的 Eye saver 等转换器进行转换。这是不可协商的。
@@ -104,8 +104,8 @@
 ---
 
 ## Character Tattoo/Face ETC Shader
-![tattoo](..assets/images/material-table/tattoo.png){ width="800" }
-![tattoo2](..assets/images/material-table/tattoo-1.png)
+![tattoo](../assets/images/material-table/tattoo.png){ width="800" }
+![tattoo2](../assets/images/material-table/tattoo-1.png)
 
 ---
 
@@ -114,7 +114,7 @@
 ---
 
 ## Stocking Shader 袜子着色器
-![stocking](..assets/images/material-table/stocking.png)
+![stocking](../assets/images/material-table/stocking.png)
 
 ---
 
@@ -131,12 +131,12 @@
 ---
 
 ## (Eye) Occlusion Shader:  (Eye) 遮挡着色器
-![occ](..assets/images/material-table/occ.png)
-![occ](..assets/images/material-table/occ-1.png)
+![occ](../assets/images/material-table/occ.png)
+![occ](../assets/images/material-table/occ-1.png)
 
 ## Character Transparency Shader 透明着色器
-![transparent](..assets/images/material-table/transparent.png)
-![transparent1](..assets/images/material-table/transparent-1.png)
+![transparent](../assets/images/material-table/transparent.png)
+![transparent1](../assets/images/material-table/transparent-1.png)
 
 ---
 
@@ -153,7 +153,7 @@
 ---
 
 ## Character Scroll(ing) Shader 滚动着色器
-![scroll](..assets/images/material-table/scroll.png)
+![scroll](../assets/images/material-table/scroll.png)
 
 ---
 
