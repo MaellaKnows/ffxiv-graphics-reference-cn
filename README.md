@@ -18,13 +18,20 @@ FFXIV Graphics Reference CN 是一个面向中文社区的开放技术文档项�
 - Penumbra
 - TexTools
 - Blender Workflow
-- Substance Painter Workflow
 
 本页面目标是建立一套适合中文mod社区长期维护的原创技术文档。
 
+---
+
+项目反馈qq群：453281804
+dc邀请链接：https://discord.com/invite/MaKs9YcmK9
+
+---
+
+
 ## 当前状态
 
-🚧 Early Development
+🚧 开发中
 
 ## License
 
