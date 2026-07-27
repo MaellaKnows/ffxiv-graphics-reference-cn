@@ -2579,7 +2579,7 @@
 <li><a href="https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table#bkmrk-hair-shader%3A">XivModding</a></li>
 </ul>
 <h2 id="character-shader">Character Shader<a class="headerlink" href="#character-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="Character Shader" src="../../assets/images/material-table/character-shader.png" width="800" />
+<p><img alt="Character Shader" src="../../assets/images/material-table/character-shader.png" width="600" />
 <img alt="Character Shader2" src="../../assets/images/material-table/character-2.png" />
 <img alt="Character Shader3" src="../../assets/images/material-table/character-3.png" /></p>
 <p>这是用于大多数你可以模组的物品（装备、仆从、坐骑、武器）的标准着色器，这些物品不是与角色创建器绑定的选项。这个着色器可能是你最常查看的。</p>
@@ -2592,14 +2592,14 @@
 <p>据进一步调查，认为mask的红色通道实际上比高光强度更接近金属使用，但由于金属度也通过颜色集值进行控制，因此这张图表将继续将其标记为高光强度，因为这也是社区发现相对可以正常工作的方式。</p>
 <hr />
 <h2 id="character-legacy-shader">Character Legacy Shader<a class="headerlink" href="#character-legacy-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="Character Legacy" src="../../assets/images/material-table/legacy.png" width="800" />
+<p><img alt="Character Legacy" src="../../assets/images/material-table/legacy.png" width="600" />
 <img alt="Character Legacy2" src="../../assets/images/material-table/legacy-2.png" />
 <img alt="Character Legacy3" src="../../assets/images/material-table/legacy-3.png" /></p>
 <hr />
 <p>这是角色传承着色器。它是旧版 endwalker 着色器的移植，用于兼容由 Square Enix 未更新的旧资产。不建议继续为这个着色器创建任何内容，因为它无法完成新版角色着色器所能做的一切。大多数资产仍将使用此着色器，除非由 Square Enix 或模制者更新。据我们所知，此着色器无法处理新版角色着色器所能处理的一些额外着色器效果。</p>
 <hr />
 <h2 id="skin-shader">Skin Shader<a class="headerlink" href="#skin-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="Skin Shader" src="../../assets/images/material-table/skin.png" width="800" />
+<p><img alt="Skin Shader" src="../../assets/images/material-table/skin.png" width="600" />
 <img alt="Skin Shader2" src="../../assets/images/material-table/skin-2.png" />
 <img alt="Skin Shader3" src="../../assets/images/material-table/skin-3.png" /></p>
 <hr />
@@ -2618,7 +2618,7 @@
 <p>标准/身体皮肤着色器默认使用的瓦片编号是 63，它会产生湿润效果。这让我们假设身体皮肤着色器的 alpha 通道是一个湿润遮罩，但实际上任何瓦片 ID 编号都可以通过手动更改来使用，因此身体皮肤着色器的 alpha 通道实际上是一个瓦片遮罩。换句话说，更改这些瓦片是高级用户功能，如果只是像以前那样使用 alpha 通道，实际上变化不大，除非你打算手动将湿润效果的瓦片图案调整为其他效果。</p>
 <hr />
 <h2 id="hair-shader">Hair Shader<a class="headerlink" href="#hair-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="Hair Shader" src="../../assets/images/material-table/hair.png" width="800" />
+<p><img alt="Hair Shader" src="../../assets/images/material-table/hair.png" width="600" />
 <img alt="Hair Shader2" src="../../assets/images/material-table/hair-1.png" />
 <img alt="Hair Shader3" src="../assets/images/material-table/hair-2.png" /></p>
 <hr />
@@ -2626,7 +2626,7 @@
 <p>目前，这个着色器似乎对外观插件和工具（如 Anamnesis、Glamourer 和 Ktisis）过去用于“头发发光”参数的值没有反应。这表明有些东西被打乱了，但我们目前还不确定是什么。</p>
 <hr />
 <h2 id="iris-shader">iris Shader<a class="headerlink" href="#iris-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="iris Shader" src="../../assets/images/material-table/iris.png" width="800" /></p>
+<p><img alt="iris Shader" src="../../assets/images/material-table/iris.png" width="600" /></p>
 <hr />
 <p>这是虹膜，或新的眼睛着色器。这个着色器没有适用于玩家的旧版本，因此所有眼睛模组都必须通过 Loose Texture Compiler 或 Textools 的 Eye saver 等转换器进行转换。这是不可协商的。</p>
 <p>新的虹膜着色器允许巩膜和虹膜位于同一贴图中，从而实现一些有趣的效果。</p>
@@ -2636,13 +2636,13 @@
 <p>由于眼球现在是一个漫反射纹理，因此无需牺牲虹膜异色就可以获得多色眼睛。这既使它们与各种头部更加兼容，也允许使用超过 2 种颜色。由于 FF14 会叠加最接近图层样式“正片叠底”的眼球颜色，因此最好通过在绘图程序中模拟来检查颜色如何相互作用。你可以选择在漫反射的眼球部分上用颜色绘制，然后允许眼球颜色影响改变这些颜色，或者在漫反射上用颜色绘制，然后在“蓝色通道”上遮盖相同的区域/渐变，以阻止这些部分随着眼球颜色而改变。</p>
 <hr />
 <h2 id="character-tattooface-etc-shader">Character Tattoo/Face ETC Shader<a class="headerlink" href="#character-tattooface-etc-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="tattoo" src="../../assets/images/material-table/tattoo.png" width="800" />
+<p><img alt="tattoo" src="../../assets/images/material-table/tattoo.png" width="600" />
 <img alt="tattoo2" src="../../assets/images/material-table/tattoo-1.png" /></p>
 <hr />
 <p>因为 Facial ETC 纹理具有多个材质，它们都指向相同的纹理，但具有不同的着色器键和参数。在更改任何之前，请检查此表格，或为要更改的特定纹理设置唯一的纹理路径。</p>
 <hr />
 <h2 id="stocking-shader">Stocking Shader 袜子着色器<a class="headerlink" href="#stocking-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="stocking" src="../../assets/images/material-table/stocking.png" /></p>
+<p><img alt="stocking" src="../../assets/images/material-table/stocking.png" width="600" /></p>
 <hr />
 <p>自 7.1 版本起，该着色器正在适配玩家装备，这使我们能够更深入地研究它。该着色器与角色（装备）着色器几乎相同，只有少数例外。主要的是，这个着色器利用 UV 通道 3 来复制并在“袜子”下方放置皮肤，而只使用一个网格，而不是之前使用的双层网格技术。然而，它被硬编码为皮肤材质 A，这意味着它总是对称的皮肤。</p>
 <p>在质感方面，“不透明度”在法线贴图的蓝色通道上不再代表整体不透明度，而是决定皮肤在何处以及显示多少“下方”内容。</p>
@@ -2651,10 +2651,10 @@
 <p>自 Penumbra 更新 1.5.1.0（2025 年 8 月 26 日）起，可以分配 stocking shader 使用修改过的材质（mat B 或 Bibo），而不是像通常硬编码的那样默认使用 mat A。要这样做，你必须将属性 "skin_suffix=bibo" 或 "skin_suffix=b" 添加到带有 stocking shader 的适当网格（部件）上。该网格还必须正确设置其 UV3，以匹配修改过的皮肤的 UV 映射。</p>
 <hr />
 <h2 id="eye-occlusion-shader-eye">(Eye) Occlusion Shader:  (Eye) 遮挡着色器<a class="headerlink" href="#eye-occlusion-shader-eye" title="Permanent link">&para;</a></h2>
-<p><img alt="occ" src="../../assets/images/material-table/occ.png" />
+<p><img alt="occ" src="../../assets/images/material-table/occ.png" width="600" />
 <img alt="occ" src="../../assets/images/material-table/occ-1.png" /></p>
 <h2 id="character-transparency-shader">Character Transparency Shader 透明着色器<a class="headerlink" href="#character-transparency-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="transparent" src="../../assets/images/material-table/transparent.png" />
+<p><img alt="transparent" src="../../assets/images/material-table/transparent.png" width="600" />
 <img alt="transparent1" src="../../assets/images/material-table/transparent-1.png" /></p>
 <hr />
 <p>这是一个在 7.2 版本中引入的新着色器，首次出现在 Historia Chokers 上。据推测，它的工作方式与标准角色着色器相似，但使用了几个额外的着色器键来实现更好的透明效果。</p>
@@ -2664,7 +2664,7 @@
 <p>这个着色器在Penumbra中使用#field 6</p>
 <hr />
 <h2 id="character-scrolling-shader">Character Scroll(ing) Shader 滚动着色器<a class="headerlink" href="#character-scrolling-shader" title="Permanent link">&para;</a></h2>
-<p><img alt="scroll" src="../../assets/images/material-table/scroll.png" /></p>
+<p><img alt="scroll" src="../../assets/images/material-table/scroll.png" width="600" /></p>
 <hr />
 <p>这是一个使用第二个 UV 通道的字符着色器版本，允许发光纹理通过 UV2 在网格上动画。速度和轴可以更改。UV2 必须是一条直线和一个平面，沿着一个轴，所有内容都朝同一个方向定向。</p>
 <p>技术上你只需要在 UV2 上做你需要做的事情，以及与 UV 和网格相关联的链接，以与你的 UV1 的 ID 贴图合作，以实现滚动效果，但为了清晰起见，尽量保持直线。</p>
