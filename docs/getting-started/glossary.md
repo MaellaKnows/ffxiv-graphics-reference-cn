@@ -1,215 +1,115 @@
-# Glossary
+# 术语与写作规范
 
-> FFXIV Graphics Reference CN Terminology
+> Applies to: 7.x（Dawntrail） ｜ Last Updated: 2026-11-01
 
-本文档定义了 FFXIV Graphics Reference CN 使用的专业术语。
+## Overview
 
-所有页面均应遵循本术语表，以保证整个项目术语统一。
+这一页规定本站**怎么写**，以及**术语怎么统一**。
 
----
+完整的术语条目（按主题分类、带解释）在 [术语表](../appendix/glossary.md)。
 
-# 使用原则
+!!! note "写作者先读这一页"
+    新增或修改页面时，至少确认三件事：术语写法、状态标记、页面结构。
 
-- 保留国际社区通用英文术语。
-- 首次出现采用 **英文（中文）** 的形式。
-- 后续可根据上下文直接使用英文。
-- 避免同一术语出现多个中文译法。
-- 对于没有统一译名的术语，优先采用 FF14 Mod 社区的习惯用法。
+## 术语写法
 
----
+原则：**保留英文，首次出现加中文括注**。
 
-# Rendering
+| 正确 | 错误 |
+|---|---|
+| Shader（着色器） | 着色器（Shader） |
+| Material（材质） | 材质（Material） |
+| Normal Map（法线贴图） | 法线纹理 |
+| Mask Map（Mask 贴图） | 遮罩贴图 |
+| Base Color（底色） | 漫反射贴图 |
+| ColorSet | 颜色集 |
+| Alpha | 透明度通道 |
 
-| English | 中文 | 缩写 | 备注 |
-|----------|------|------|------|
-| Shader | Shader（着色器） | - | 不直接写“着色器” |
-| Rendering Pipeline | 渲染管线 | - | |
-| Draw Call | Draw Call（绘制调用） | - | 保留英文 |
-| Render Pass | 渲染阶段 | - | |
-| Rasterization | 光栅化 | - | |
-| Vertex Shader | 顶点 Shader | VS | |
-| Pixel Shader | 像素 Shader | PS | |
-| Compute Shader | Compute Shader（计算着色器） | CS | |
+以下术语全文保留英文，不翻译：
 
----
+Shader、Material、Material Constant、Shader Key、Vertex Color、ColorSet、Sampler、Texture Slot、Normal Map、Mask Map、FlowMap、SphereMap、Index Map、UV、Mesh、LOD、Specular、Roughness、Ambient Occlusion（AO）、Emissive、Alpha、Draw Call、Pipeline。
 
-# Material
+## 状态标记
 
-| English | 中文 | 缩写 | 备注 |
-|----------|------|------|------|
-| Material | Material（材质） | - | |
-| Material Constant | Material Constant（材质常量） | - | 不翻译为“常量参数” |
-| Material Flag | Material Flag（材质标志） | - | |
-| Shader Key | Shader Key（着色器键） | - | |
-| Sampler | Sampler（采样器） | - | |
-| Additional Data | Additional Data（附加数据） | - | |
+所有结论都要能看出可信度。
 
----
+| 标记 | 含义 | 使用场景 |
+|---|---|---|
+| ✅ Verified（已验证） | 实际修改并在游戏内确认 | 可以当作事实写 |
+| 🟡 Researching（研究中） | 有实验，结论仍在完善 | 写结论时加「目前」 |
+| 🟠 Hypothesis（推测） | 社区常见说法，尚未验证 | 必须写明「推测」 |
+| 🔴 Unknown（未知） | 没有可靠结论 | 不要用猜测填空 |
 
-# Texture
+!!! warning "不要把推测写成事实"
+    没有验证过的数值、槽位编号、常量名，一律标 🟡 或 🟠，或者干脆不写。
 
-| English | 中文 | 缩写 | 备注 |
-|----------|------|------|------|
-| Texture | Texture（贴图） | - | |
-| Texture Slot | Texture Slot（贴图槽） | - | |
-| Base Color | Base Color（底色） | - | 推荐使用 |
-| Diffuse | Diffuse（漫反射） | - | 理论术语，文档中优先使用 Base Color |
-| Normal Map | Normal Map（法线贴图） | - | |
-| Mask Map | Mask Map（Mask 贴图） | - | 不写“遮罩贴图” |
-| FlowMap | FlowMap | - | 保持单词形式 |
-| SphereMap | SphereMap | - | 保持单词形式 |
-| CubeMap | CubeMap | - | |
-| Index Map | Index Map（索引贴图） | - | |
-| TileMap | TileMap | - | |
+## 页面结构
 
----
+Shader 页面必须包含以下小节（可以增加，不能删除）：
 
-# Texture Channels
+- Overview
+- Shader File
+- Supported Versions
+- Official Usage
+- Texture Slots
+- Vertex Colors
+- UV Channels
+- Material Constants
+- Shader Keys
+- Additional Data
+- Penumbra Mapping
+- TexTools Mapping
+- Modding Tips
+- Known Issues
+- References
 
-| English | 中文 | 缩写 | 备注 |
-|----------|------|------|------|
-| Red Channel | 红色通道 | R | |
-| Green Channel | 绿色通道 | G | |
-| Blue Channel | 蓝色通道 | B | |
-| Alpha Channel | Alpha 通道 | A | 不写 Alpha Layer |
+其它类型的页面建议结构：
 
----
+| 页面类型 | 建议小节 |
+|---|---|
+| 概念页 | Overview → 原理 → 表格 → 常见问题 → References |
+| 工作流页 | Overview → 前置条件 → 步骤 → 验证 → 常见问题 → References |
+| 参考页 | 表格优先，附字段说明与可信度 |
 
-# Surface Properties
+## 排版约定
 
-| English | 中文 | 缩写 | 备注 |
-|----------|------|------|------|
-| Specular | Specular（高光） | - | |
-| Specular Power | 高光强度 | - | |
-| Roughness | Roughness（粗糙度） | - | |
-| Metallic | Metallic（金属度） | - | |
-| Ambient Occlusion | Ambient Occlusion（环境光遮蔽） | AO | 后文统一使用 AO |
-| Emissive | Emissive（自发光） | - | |
-| Opacity | Alpha（透明度） | - | 推荐使用 Alpha |
-| Transparency | Transparency（透明） | - | 与 Alpha 区分 |
-| Refraction | Refraction（折射） | - | |
-| Fresnel | Fresnel（菲涅耳） | - | |
+| 项目 | 约定 |
+|---|---|
+| 段落 | 一段不超过 4 行 |
+| 表格 | 对比、枚举、字段说明优先用表格 |
+| 图 | 流程用 Mermaid，不用截图 |
+| 提示 | `!!! note`、`!!! warning`、`!!! tip` |
+| 链接 | 站内链接写相对路径 `.md` |
+| 文件名 | 小写 kebab-case |
 
----
+## 引用与来源
 
-# Mesh
+每个页面结尾都要有 `## References`，并给出可访问的真实链接：
 
-| English | 中文 | 缩写 | 备注 |
-|----------|------|------|------|
-| Mesh | Mesh（网格） | - | |
-| Vertex | Vertex（顶点） | - | |
-| Vertex Color | Vertex Color（顶点色） | VC | 首次出现不使用缩写 |
-| Vertex Normal | 顶点法线 | - | |
-| UV | UV | - | 不翻译 |
-| UV Channel | UV 通道 | - | |
-| Tangent | 切线 | - | |
-| Bitangent | 副切线 | - | |
-| LOD | Level of Detail（细节层级） | LOD | |
+- XIV Modding Wiki — https://xivmodding.com/
+- TexTools — https://github.com/TexTools/FFXIV_TexTools_UI
+- Penumbra — https://github.com/xivdev/Penumbra
+- Blender — https://www.blender.org/
 
----
+不要写「来源不明」「据说」。
 
-# Colorset
+## 实验内容
 
-| English | 中文 | 缩写 | 备注 |
-|----------|------|------|------|
-| Colorset | Colorset | - | 不翻译 |
-| Colorset Row | Colorset 行 | - | |
-| Colorset Pair | Colorset Pair | - | |
+实验性结论需要写清：
 
----
+1. 测试版本（如 7.x）
+2. 测试方法（改了哪个文件、哪个字段）
+3. 测试结果（截图或现象描述）
+4. 是否可复现
 
-# Shader Types
+## 相关页面
 
-| English | 中文 |
-|----------|------|
-| Character Shader | Character Shader |
-| Character Glass Shader | Character Glass Shader |
-| Character Stocking Shader | Character Stocking Shader |
-| Character Scroll Shader | Character Scroll Shader |
-| Character Ink Shader | Character Ink Shader |
-| Character Transparency Shader | Character Transparency Shader |
-| Character Hair Shader | Character Hair Shader |
-| Character Face Shader | Character Face Shader |
-| Character Eye Shader | Character Eye Shader |
-| Character Skin Shader | Character Skin Shader |
-| Furniture Shader | Furniture Shader |
-| Background Shader | Background Shader |
-| Water Shader | Water Shader |
-| Terrain Shader | Terrain Shader |
-| VFX Shader | VFX Shader |
+- [术语表](../appendix/glossary.md)
+- [参考资料](../appendix/references.md)
+- [更新日志](../appendix/changelog.md)
 
-> Shader 类型名称保持英文，不进行翻译。
+## References
 
----
-
-# File Formats
-
-| Extension | 名称 |
-|------------|------|
-| .mdl | Model |
-| .mtrl | Material |
-| .tex | Texture |
-| .atex | Colorset Texture |
-| .shpk | Shader Package |
-| .pap | Animation |
-| .avfx | Visual Effect |
-
----
-
-# Software
-
-| English | 中文 |
-|----------|------|
-| Penumbra | Penumbra |
-| TexTools | TexTools |
-| Blender | Blender |
-| Substance Painter | Substance Painter |
-| Photoshop | Photoshop |
-| Materialize | Materialize |
-
-软件名称保持官方英文。
-
----
-
-# Status
-
-所有研究内容均使用以下状态：
-
-| Status | 中文 | 含义 |
-|--------|------|------|
-| Verified | 已验证 | 已通过实验验证，可认为可靠。 |
-| Researching | 研究中 | 已有实验，但结论仍在完善。 |
-| Hypothesis | 推测 | 社区提出的合理假设，尚未验证。 |
-| Unknown | 未知 | 当前没有可靠结论。 |
-
----
-
-# Writing Conventions
-
-推荐：
-
-- Shader（着色器）
-- Material（材质）
-- Normal Map（法线贴图）
-- Base Color（底色）
-- Vertex Color（顶点色）
-
-避免：
-
-- 着色器（Shader）
-- 法线纹理
-- 面具贴图
-- 漫反射贴图（在 Shader 页面中）
-
----
-
-# Future Updates
-
-随着 Dawntrail 及后续版本更新，本术语表将持续维护。
-
-新增术语时，请遵循以下原则：
-
-1. 优先采用国际社区通用名称。
-2. 保留英文作为主索引。
-3. 中文译名保持唯一。
-4. 修改术语前，应检查全站引用，避免同义词混用。
+- XIV Modding Wiki — https://xivmodding.com/
+- MkDocs Material 文档 — https://squidfunk.github.io/mkdocs-material/
+- PyMdown Extensions — https://facelessuser.github.io/pymdown-extensions/

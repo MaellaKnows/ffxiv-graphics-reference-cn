@@ -218,13 +218,25 @@ Character Shader 通常支持以下功能。
 
 ## 常见 Character Shader
 
-下表列出了游戏中常见的 Character Shader。
+下表列出社区中最常遇到的 Character 系 Shader。
 
-| Shader | 主要用途 | 备注 |
-|---------|----------|------|
-| （待补充） | | |
+| Shader | 主要用途 | 本站页面 |
+|---------|----------|----------|
+| `character.shpk` | 装备、坐骑、大部分可改模型 | 本页 |
+| `characterlegacy.shpk` | 尚未更新的旧资产 | [CharacterLegacy Shader](character-legacy-shader.md) |
+| `characterglass.shpk` | 透明、折射部件 | [Glass Shader](glass-shader.md) |
+| `characterstocking.shpk` | 丝袜、半透明织物 | [Stocking Shader](stocking-shader.md) |
+| `characterinc.shpk` | 特殊墨色渲染 | [Shader Reference](shader-reference.md) |
+| `characterscroll.shpk` | 卷轴、告示类物件 | [Shader Reference](shader-reference.md) |
+| `skin.shpk` | 身体皮肤 | [Skin Shader](skin-shaders.md) |
+| `face.shpk` | 面部 | [Face Shader](face-shaders.md) |
+| `hair.shpk` | 头发 | [Hair Shader](hair-shaders.md) |
+| `eye.shpk` | 眼睛 | [Eye Shader](eye-shaders.md) |
 
-> 本表将在后续章节持续完善。
+!!! note "关于命名"
+    上表文件名按社区常见写法整理，🟡 Researching：不同版本的资源包中可能新增或重命名。实际以 TexTools 里材质显示的名称为准。
+
+> 本表会随测试补充，欢迎提交对照结果。
 
 ---
 

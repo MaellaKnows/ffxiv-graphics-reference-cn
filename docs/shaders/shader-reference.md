@@ -211,11 +211,18 @@ FFXIV 的 Shader（着色器） 大致可以分为以下几类：
 
 建议按以下顺序阅读本 Wiki：
 
-1. Shader Reference（当前章节）
-2. Character Shader（最常用着色器）
-3. 其他shaders章节
-4. Material（MTRL）
-5. Texture
-6. Workflow
+1. [Shader Reference](shader-reference.md)（当前章节）
+2. [Character Shader](character-shaders.md)（最常用着色器）
+3. [Shader 概览](index.md) 里的其他 Shader 页面
+4. [Material（材质）概览](../materials/index.md)
+5. [Texture（贴图）概览](../textures/index.md)
+6. [Workflow（工作流）概览](../workflows/index.md)
 
-这样可以建立完整的mod工作流程理解。
+这样可以建立完整的 mod 工作流程理解。
+
+## References
+
+- XIV Modding Wiki — https://xivmodding.com/
+- Dawntrail Shader Reference Table — https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table
+- TexTools — https://github.com/TexTools/FFXIV_TexTools_UI
+- Penumbra — https://github.com/xivdev/Penumbra

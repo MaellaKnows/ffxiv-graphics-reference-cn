@@ -1,15 +1,38 @@
 name: ci
+
 on:
   push:
     branches:
-      - master
       - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
 
 permissions:
   contents: write
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build (strict)
+        run: mkdocs build --strict
+
   deploy:
+    if: github.event_name == 'push'
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,9 +44,10 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: "3.12"
+          cache: pip
 
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - run: echo "cache_id=$(date +%V)" >> $GITHUB_ENV
 
       - uses: actions/cache@v4
         with:
@@ -32,6 +56,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
 
-      - run: pip install mkdocs-material
+      - run: pip install -r requirements.txt
 
       - run: mkdocs gh-deploy --force

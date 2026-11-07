@@ -1,0 +1,18 @@
+# 构建产物
+site/
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 本地检查目录
+.build-check/
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

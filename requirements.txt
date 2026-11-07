@@ -1,0 +1,5 @@
+# 文档站构建依赖
+# 本地预览： pip install -r requirements.txt && mkdocs serve
+# zh 搜索分词依赖 jieba，缺失时构建会失败
+mkdocs-material>=9.8,<10
+jieba>=0.42

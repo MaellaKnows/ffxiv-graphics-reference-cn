@@ -1,43 +1,68 @@
 # 安装环境
 
-## 必备软件
+> Applies to: 7.x（Dawntrail） ｜ Last Updated: 2026-11-01
 
-**游戏本体**
+## Overview
 
-Final Fantasy XIV
+这一页列出做 FFXIV Mod 需要装的东西，以及每个工具「装来干什么」。
 
-说明：
+不需要全部装。按你要做的事情选：
 
-安装国际服/国服客户端
+| 目标 | 至少需要 |
+|---|---|
+| 只换贴图 | TexTools + Penumbra |
+| 改模型 | 上面 + Blender |
+| 改材质/染色 | 上面 + TexTools Material Editor |
+| 改特效 | 上面 + VFXEditor |
 
-<hr style="border: 0; height: 1px; background: #555;"> 
+## 必备：游戏本体
+
+Final Fantasy XIV（国际服或国服客户端）。
+
+!!! note "版本对齐"
+    Mod 工具通常跟随国际服版本更新。国服版本落后时，部分新结构（如 Dawntrail 材质）可能无法正确解析。
+
+---
 
 ## Mod 管理环境
 
-### Penumbra
+### XIVLauncher
 
-用途：在游戏中管理mod，且不修改游戏源文件
+第三方启动器，是 Dalamud 与 Penumbra 的运行前提。
 
-安装方式：dalamud 第三方链接
+用途：
 
-Mod 文件夹位置：自行设置
-
-例如：
-Penumbra：管理角色、装备、贴图、模型Mod
+- 启动游戏
+- 加载 Dalamud 插件框架
 
 ### Dalamud
 
-所谓Dalamud，在中文玩家社区中常被称为 “卫月” ，是驱动整个FFXIV Mod与插件生态的核心技术框架。可以把它理解为一个强大的“游戏修改平台”或“插件引擎”。
+中文社区常称「卫月」，是 FFXIV 插件与 Mod 生态的核心框架。
 
-Dalamud为所有第三方插件提供了运行所需的基础环境、API（应用程序编程接口）和与游戏数据交互的能力。它就像一个操作系统，而各种插件就是运行在上面的应用程序。
+它提供：
 
-它通过内存保护机制，提供了一个相对安全、受控的通道，让插件能读取和影响游戏，同时避免了直接修改游戏文件或内存带来的风险（譬如炸游戏）。
+- 插件加载与更新
+- 与游戏数据交互的 API
+- 插件之间的隔离与共存
 
-Dalamud负责管理所有插件的加载、运行、更新和卸载，确保多个插件能够稳定地共存，互不干扰。
+可以把它理解成「插件操作系统」，Penumbra 等插件运行在它之上。
 
-如何安装：从蓝月官网下载xivlaucher (卫月加载器)
+!!! warning "安全边界"
+    Dalamud 通过受控接口影响游戏，而不是直接改游戏文件。请只从官方渠道安装，不要使用来路不明的注入工具。
 
-<hr style="border: 0; height: 1px; background: #555;"> 
+### Penumbra
+
+用途：在运行时替换游戏资源，不修改原始游戏文件。
+
+特点：
+
+- 可随时开关
+- 多个 mod 可叠加
+- 出问题能一键回滚
+
+Mod 文件夹位置可自行设置，建议单独放在一个容易备份的目录。
+
+---
 
 ## 制作软件
 
@@ -45,75 +70,100 @@ Dalamud负责管理所有插件的加载、运行、更新和卸载，确保多�
 
 推荐版本：
 
-- Blender 4.2 LTS 
-
-长期支持，相对稳定，插件长期更新
-
-- Blender 5.0
-
-插件生态丰富，版本较新
-
-- Blender 2.7.5 或 Blender 2.8.0+
-
-较多游戏公司使用ASCII或Mesh等加密方式，相对古老的blender版本才有插件支持
+| 版本 | 说明 |
+|---|---|
+| Blender 4.2 LTS / 4.5 LTS | 长期支持，插件生态稳定 🟡 |
+| 较新的 4.x | 功能新，插件可能需要更新 |
+| 2.7x / 2.8x | 仅在处理老工具链或老格式时需要 |
 
 用途：
+
 - 模型修改
-- UV编辑
+- UV 编辑
 - 法线处理
-- 骨骼调整
+- 骨骼与权重调整
 
 链接：
 
-- [Blender官网下载链接](https://www.blender.org/download)
-- [Blender官方插件链接](https://extensions.blender.org/)
+- [Blender 官网](https://www.blender.org/download)
+- [Blender 扩展平台](https://extensions.blender.org/)
 
-<hr style="border: 0; height: 1px; background: #555;"> 
+### Photoshop / GIMP
 
-## 贴图处理制作软件
+用途：贴图编辑。
 
-### Photoshop
+需要支持：
 
-用途：
-
-贴图编辑：
-- DDS
-- rgba通道
-- Mask
-- Normal
+- DDS 读写
+- RGBA 通道
+- Mask 与 Normal 处理
 
 ### Substance 3D Painter（可选）
 
 用于：
 
-高级材质制作
-PBR贴图
-法线烘焙
+- PBR 贴图制作
+- 法线烘焙
+- 材质细节绘制
+
+---
 
 ## FF14 专用工具
 
-### Textools
+### TexTools
 
 用途：
 
 - 解包游戏资源
-- 查看模型
+- 预览模型与材质
 - 导入导出贴图
-- 创建Mod并且打包成modpack
+- 编辑 Material
+- 打包 modpack
 
-对于模组制作者而言，TexTools是一个集资源管理、3D编辑、纹理处理和模组打包于一体的“一站式”创作平台，其核心用途是为创作者提供从构思到发布的完整工作流。
+对 Mod 作者来说，TexTools 是资源管理 + 材质编辑 + 打包的一站式工具。详细用法见 [TexTools](../workflows/textools.md)。
 
+### VFXEditor
 
-### VFX Editor
 用途：
 
 - 修改技能特效
 - 修改武器光效
 - 调整粒子
 
-## 其他插件安装
+---
 
-✔ Yet Another FFXIV Plugin
-✔ TexTools Blender Tools
+## 推荐插件
 
-以上插件请自行寻找安装方式
+| 插件 | 作用 | 说明 |
+|---|---|---|
+| Penumbra | 资源替换 | 必备 |
+| Glamourer | 外观幻化 | 测试染色与外观 |
+| Ktisis / Anamnesis | 姿态与截图 | 展示成品 |
+| FFXIV Blender 相关导入导出插件 | 模型导入导出 | 名称与安装方式以社区文档为准 🟡 |
+
+!!! tip "装完先验证"
+    打开游戏 → Dalamud 插件列表里能看到 Penumbra → 随便装一个已知可用的 mod → 确认生效。三步都通过再开始制作。
+
+## 常见问题
+
+| 症状 | 可能原因 | 处理 |
+|---|---|---|
+| 游戏启动失败 | 启动器与游戏版本不匹配 | 更新 XIVLauncher |
+| Penumbra 不显示 | Dalamud 未加载或插件禁用 | 检查插件列表 |
+| 导入的贴图模糊 | 未生成 mipmap 或尺寸不对 | 按 2 的幂次尺寸导出 |
+| 工具报错无法读取 `.tex` | TexTools 版本过旧 | 更新到最新版 |
+
+## 相关页面
+
+- [FF14 的文件结构](folder-structure.md)
+- [Workflow（工作流）概览](../workflows/index.md)
+- [故障排除](../workflows/troubleshooting.md)
+
+## References
+
+- XIVLauncher — https://github.com/goatcorp/FFXIVQuickLauncher
+- Dalamud — https://github.com/goatcorp/Dalamud
+- Penumbra — https://github.com/xivdev/Penumbra
+- TexTools — https://github.com/TexTools/FFXIV_TexTools_UI
+- Blender — https://www.blender.org/
+- XIV Modding Wiki — https://xivmodding.com/

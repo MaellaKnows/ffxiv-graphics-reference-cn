@@ -495,9 +495,9 @@ Legacy Character Shader 存在一些限制：
 
 ---
 
-# References
+## References
 
-- XIV Modding Wiki
-- TexTools Documentation
-- Penumbra Documentation
-- FFXIV Shader Research Community
+- XIV Modding Wiki — https://xivmodding.com/
+- TexTools — https://github.com/TexTools/FFXIV_TexTools_UI
+- Penumbra — https://github.com/xivdev/Penumbra
+- 着色器参考表（站内）：[materials-table.md](../appendix/materials-table.md)

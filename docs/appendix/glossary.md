@@ -439,9 +439,9 @@ FFXIV 特有的颜色控制系统。
 
 ---
 
-# References（参考资料）
+## References（参考资料）
 
-- XIV Modding Wiki
-- TexTools Documentation（TexTools 文档）
-- Penumbra Documentation（Penumbra 文档）
-- FFXIV Shader Research Community（FFXIV Shader 研究社区）
+- XIV Modding Wiki — https://xivmodding.com/
+- TexTools — https://github.com/TexTools/FFXIV_TexTools_UI
+- Penumbra — https://github.com/xivdev/Penumbra
+- 站内术语与写作规范：[术语与写作规范](../getting-started/glossary.md)

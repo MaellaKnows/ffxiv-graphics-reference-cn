@@ -1,11 +1,14 @@
 # 着色器参考表
->本篇完全使用Xiv Modding的材质表格，仅提供中文机器翻译。
 
->内容完全照搬Modding wiki,有英文基础建议阅读原文。
+> Applies to: 7.x（Dawntrail） ｜ Last Updated: 2026-11-01
 
->>由于本站还在基础建设状态，本站后期完成后会进行系统性翻译。
+> 本篇内容整理自 XIV Modding Wiki 的 Dawntrail Shader Reference Table，为社区机器翻译 + 人工校订版本。
 
-- [XivModding](https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table#bkmrk-hair-shader%3A)
+!!! note "阅读提示"
+    - 原文为英文，本页尽量保留原表格信息，术语以英文为准。
+    - 有英文基础时建议直接阅读原文：[Dawntrail Shader Reference Table](https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table)
+    - 表格仍在持续校订，🟡 标记的结论请以实际测试为准。
+    - 各 Shader 的详细说明见本站 [Shader 章节](../shaders/index.md)。
 
 ## Character Shader
 
@@ -76,7 +79,6 @@
 
 ![Hair Shader](../assets/images/material-table/hair.png){ width="600" }
 ![Hair Shader2](../assets/images/material-table/hair-1.png)
-![Hair Shader3](../assets/images/material-table/hair-2.png)
 
 ---
 
@@ -210,3 +212,10 @@ If you are using this shader on a skintight clothing mesh, or a mesh that is oth
 | Hair.shpk (?) | 10 | Wet Look / Specular Change<br>湿润效果 / 高光变化 | 用于改变头发的湿润外观以及高光表现。具体实现方式尚未完全确认。 |
 | Character.shpk | 0, 7, 10, 12, 17+ | Mask Blue Channel = Ambient Occlusion<br>Mask 蓝色通道 = 环境光遮蔽 | Mask Texture 的蓝色通道会被 Shader 读取为 AO（环境光遮蔽）数据。 |
 | Hair.shpk | 2 | Ignore Self-Cast Shadows<br>忽略自身投射阴影 | 当 Shader Key「tattoo」启用时，可以忽略自身产生的阴影。（具体条件尚未完全确认） |
+
+## References
+
+- XIV Modding Wiki — https://xivmodding.com/
+- Dawntrail Shader Reference Table — https://xivmodding.com/books/ff14-asset-reference-document/page/dawntrail-shader-reference-table
+- TexTools — https://github.com/TexTools/FFXIV_TexTools_UI
+- 各 Shader 详细说明（站内）：[shaders/index.md](../shaders/index.md)
