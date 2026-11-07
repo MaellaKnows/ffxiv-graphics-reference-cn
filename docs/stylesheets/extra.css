@@ -1,365 +1,398 @@
-/* ==================================================
-   FFXIV Graphics Reference CN
-   GRC Advanced Gray Theme
-   ================================================== */
+/* ==========================================================================
+   FFXIV Graphics Reference CN — 统一主题样式
+   --------------------------------------------------------------------------
+   1. 设计令牌：字体、圆角、颜色、阴影
+   2. 基础排版：正文、标题、链接、分隔线、焦点
+   3. 内容组件：表格、代码、提示块、图片、按钮、卡片
+   4. 结构组件：页眉、标签栏、侧边导航、页脚
+   5. 细节：滚动条、背景水印、动效降级、打印
+   组件只通过令牌取色，保证亮色 / 暗色两套方案表现一致。
+   ========================================================================== */
 
+/* 1. 设计令牌 ============================================================== */
 
-/* ==================================================
-   Color Theme
-   ================================================== */
+:root {
+  /* 字体：Latin 用系统 UI 字体，CJK 回落到本地黑体，避免中英混排跳变 */
+  --md-text-font: system-ui, -apple-system, "Segoe UI", "Noto Sans SC",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --md-code-font: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", Consolas,
+    "Microsoft YaHei", monospace;
 
+  /* 圆角：小 = 行内元素，中 = 块级组件，大 = 卡片 */
+  --grc-radius-sm: 6px;
+  --grc-radius-md: 12px;
+  --grc-radius-lg: 16px;
 
-/* ---------- Light Mode ---------- */
+  /* 统一的过渡曲线 */
+  --grc-ease: transform .2s ease, box-shadow .2s ease,
+    background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+/* ---------- 亮色方案 ---------- */
 
 [data-md-color-scheme="default"] {
+  --md-primary-fg-color: #3d3f44;
+  --md-primary-fg-color--light: #676c76;
+  --md-primary-fg-color--dark: #2a2c30;
 
-    --md-primary-fg-color: #3d3f44;
-    --md-primary-fg-color--light: #676c76;
-    --md-primary-fg-color--dark: #555962;
+  --md-default-bg-color: #f5f5f3;
+  --md-default-fg-color: #2d3137;
+  --md-default-fg-color--light: #5a6069;
+  --md-default-fg-color--lighter: #8a9099;
+  --md-default-fg-color--lightest: #d8dbdf;
 
-    --md-default-bg-color: #F5F5F3;
-    --md-default-fg-color: #2D3137;
+  --md-code-bg-color: #ecedea;
 
-    --md-code-bg-color: #ECEDEA;
+  /* 链接与强调色：低饱和钢蓝，与正文区分 */
+  --md-typeset-a-color: #3f6f92;
+  --md-accent-fg-color: #2f5b7a;
 
+  --grc-border: #d8dbdf;
+  --grc-surface: #ecece9;
+  --grc-surface-strong: #e4e5e1;
+  --grc-shadow-1: 0 2px 8px rgba(45, 49, 55, .06);
+  --grc-shadow-2: 0 8px 20px rgba(45, 49, 55, .12);
+  --grc-watermark-opacity: .035;
+
+  --grc-primary: #3d3f44;
+  --grc-primary-hover: #4b4e54;
+  --grc-on-primary: #ffffff;
+  --grc-header-line: rgba(255, 255, 255, .08);
 }
 
-
-
-/* ---------- Dark Mode ---------- */
+/* ---------- 暗色方案 ---------- */
 
 [data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2a2d31;
+  --md-primary-fg-color--light: #3a3e43;
+  --md-primary-fg-color--dark: #1b1d20;
 
-    --md-primary-fg-color: #2A2D31;
-    --md-primary-fg-color--light: #3A3E43;
-    --md-primary-fg-color--dark: #1B1D20;
+  --md-default-bg-color: #1d1f21;
+  --md-default-fg-color: #ececec;
+  --md-default-fg-color--light: #a9b0b8;
+  --md-default-fg-color--lighter: #7d848c;
+  --md-default-fg-color--lightest: #3a3e43;
 
-    --md-default-bg-color: #1D1F21;
-    --md-default-fg-color: #ECECEC;
+  --md-code-bg-color: #26292d;
 
-    --md-code-bg-color: #26292D;
+  --md-typeset-a-color: #8fb8d6;
+  --md-accent-fg-color: #a9cbe4;
 
+  --grc-border: #3a3e43;
+  --grc-surface: #26292d;
+  --grc-surface-strong: #2f3338;
+  --grc-shadow-1: 0 2px 8px rgba(0, 0, 0, .35);
+  --grc-shadow-2: 0 8px 20px rgba(0, 0, 0, .45);
+  --grc-watermark-opacity: .06;
+
+  --grc-primary: #4a5058;
+  --grc-primary-hover: #576067;
+  --grc-on-primary: #ffffff;
+  --grc-header-line: rgba(255, 255, 255, .06);
 }
 
+/* 2. 基础排版 ============================================================== */
 
+body {
+  background-color: var(--md-default-bg-color);
+}
 
-/* ==================================================
-   Header
-   保留 Material 原生结构
-   ================================================== */
+.md-typeset {
+  line-height: 1.72;
+  word-break: break-word;
+}
 
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset a {
+  text-decoration-thickness: .05rem;
+  text-underline-offset: .16em;
+}
+
+.md-typeset a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset hr {
+  height: 1px;
+  margin: 1.9em 0;
+  border: 0;
+  background-color: var(--grc-border);
+}
+
+:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* 3. 内容组件 ============================================================== */
+
+/* ---------- 表格 ---------- */
+
+.md-typeset table:not([class]) {
+  font-size: .72rem;
+  border: 1px solid var(--grc-border);
+  border-radius: var(--grc-radius-sm);
+  background-color: transparent;
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  background-color: var(--grc-surface);
+}
+
+/* 首列多为短标签，给一个最小宽度，避免中文被逐字拆行 */
+.md-typeset table:not([class]) tr > :first-child {
+  min-width: 9em;
+}
+
+/* 宽屏下表格撑满正文栏，避免首列被挤成逐字换行；窄屏保留横向滚动 */
+@media screen and (min-width: 60em) {
+  .md-typeset table:not([class]) {
+    display: table;
+    width: 100%;
+  }
+}
+
+/* ---------- 代码 ---------- */
+
+.md-typeset code {
+  border-radius: var(--grc-radius-sm);
+}
+
+.md-typeset pre > code {
+  border-radius: var(--grc-radius-md);
+}
+
+.md-typeset .highlight > pre {
+  border-radius: var(--grc-radius-md);
+}
+
+/* ---------- 提示块 / 折叠块 ---------- */
+
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: .72rem;
+  border-radius: var(--grc-radius-md);
+  box-shadow: none;
+}
+
+/* ---------- 图片 ---------- */
+
+.md-typeset img {
+  max-width: 100%;
+}
+
+.md-typeset p > img {
+  border-radius: var(--grc-radius-md);
+  box-shadow: var(--grc-shadow-1);
+}
+
+/* ---------- 按钮 ---------- */
+
+.md-typeset .md-button {
+  padding: .55em 1.3em;
+  border-width: 1px;
+  border-radius: var(--grc-radius-md);
+  font-weight: 500;
+  transition: var(--grc-ease);
+}
+
+.md-typeset .md-button:not(.md-button--primary) {
+  color: var(--md-primary-fg-color);
+  background-color: transparent;
+  border-color: var(--grc-border);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button:not(.md-button--primary) {
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .md-button--primary {
+  color: var(--grc-on-primary);
+  background-color: var(--grc-primary);
+  border-color: var(--grc-primary);
+}
+
+.md-typeset .md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--grc-shadow-2);
+}
+
+.md-typeset .md-button:not(.md-button--primary):hover {
+  color: var(--md-accent-fg-color);
+  background-color: var(--grc-surface);
+  border-color: var(--grc-border);
+}
+
+.md-typeset .md-button--primary:hover {
+  color: var(--grc-on-primary);
+  background-color: var(--grc-primary-hover);
+  border-color: var(--grc-primary-hover);
+}
+
+/* ---------- 卡片 ---------- */
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--grc-border);
+  border-radius: var(--grc-radius-lg);
+  background-color: var(--grc-surface);
+  box-shadow: var(--grc-shadow-1);
+  transition: var(--grc-ease);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ul > li:focus-within,
+.md-typeset .grid > .card:hover {
+  transform: translateY(-3px);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: var(--grc-shadow-2);
+}
+
+/* 4. 结构组件 ============================================================== */
+
+/* ---------- 页眉 / 标签栏 ---------- */
 
 .md-header {
-
-    backdrop-filter:
-        blur(12px);
-
-    -webkit-backdrop-filter:
-        blur(12px);
-
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--grc-header-line);
 }
 
 .md-header__title {
-
-    margin-left:
-        10px;
-
+  margin-left: .5rem;
 }
-
 
 .md-header__button.md-logo {
-
-    margin-right:
-        8px;
-
+  margin-right: .4rem;
 }
 
-/* ==================================================
-   Buttons
-   ================================================== */
-
-
-.md-button {
-
-    border-radius:
-        12px;
-
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-
+.md-tabs {
+  border-bottom: 1px solid var(--grc-header-line);
 }
 
-
-
-.md-button:hover {
-
-    transform:
-        translateY(-2px);
-
-
-    box-shadow:
-        0 6px 16px rgba(0,0,0,.12);
-
-}
-
-
-
-/* ==================================================
-   Cards
-   ================================================== */
-
-
-.md-typeset .grid.cards > ul > li {
-
-    border-radius:
-        16px;
-
-
-    border:
-        1px solid #D8DBDF;
-
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,.04);
-
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-
-}
-
-
-
-.md-typeset .grid.cards > ul > li:hover {
-
-    transform:
-        translateY(-3px);
-
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.08);
-
-}
-
-
-
-/* Dark Mode Cards */
-
-[data-md-color-scheme="slate"]
-.md-typeset .grid.cards > ul > li {
-
-    border-color:
-        #45484D;
-
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,.25);
-
-}
-
-
-
-[data-md-color-scheme="slate"]
-.md-typeset .grid.cards > ul > li:hover {
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.45);
-
-}
-
-
-
-/* ==================================================
-   Markdown Elements
-   ================================================== */
-
-
-/* 图片圆角 */
-
-.md-typeset img {
-
-    border-radius:
-        12px;
-
-}
-
-
-
-/* 表格圆角 */
-
-.md-typeset table:not([class]) {
-
-    border-radius:
-        12px;
-
-
-    overflow:
-        hidden;
-
-}
-
-
-/* ==================================================
-   Dark Mode Buttons
-   ================================================== */
-
-
-[data-md-color-scheme="slate"]
-.md-button {
-
-    background-color:
-        #45484D;
-
-
-    color:
-        #F0F0F0;
-
-
-    border:
-        1px solid #5A5E64;
-
-}
-
-
-
-[data-md-color-scheme="slate"]
-.md-button:hover {
-
-    background-color:
-        #5A5E64;
-
-
-    color:
-        white;
-
-}
-
-
-/* ==================================================
-   Scrollbar
-   ================================================== */
-
-
-::-webkit-scrollbar {
-
-    width:
-        10px;
-
-}
-
-
-
-::-webkit-scrollbar-thumb {
-
-    border-radius:
-        10px;
-
-}
-
-/* ==================================================
-   GRC Global Background Logo
-   ================================================== */
-
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-
-    background-image:
-        url("../images/icons.png");
-
-
-    background-repeat:
-        no-repeat;
-
-
-    background-position:
-        center center;
-
-
-    background-size:
-        700px;
-
-
-    opacity:
-        .035;
-
-
-    pointer-events:
-        none;
-
-
-    z-index:
-        0;
-
-}
-
-html,
-body {
-
-    background-color:
-        var(--md-default-bg-color);
-
-}
-
-[data-md-color-scheme="slate"]
-body::before {
-
-    opacity:
-        .06;
-
-}
-
-
-/* ==================================================
-   Sidebar Navigation Size
-   ================================================== */
-
-
-/* 左侧索引一级标题 */
-
-.md-nav__item--nested > .md-nav__link {
-
-    font-size:
-        1rem;
-
-    font-weight:
-        600;
-
-}
-
-
-
-/* 当前展开标题 */
-
-.md-nav__item--active > .md-nav__link {
-
-    font-weight:
-        500;
-
-}
-
-
-
-/* 子页面 */
+/* ---------- 侧边导航 / 目录 ---------- */
 
 .md-nav__link {
-
-    font-size: 0.7rem;
-    letter-spacing: .02em;
-
+  font-size: .7rem;
+  letter-spacing: .02em;
+  transition: color .15s ease;
 }
 
+.md-nav__item--nested > .md-nav__link {
+  font-size: 1rem;
+  font-weight: 600;
+}
 
+.md-nav__item--active > .md-nav__link {
+  font-weight: 500;
+}
 
-/* ==================================================
-   End
-   ================================================== */
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* ---------- 页脚 ---------- */
+
+.md-footer {
+  border-top: 1px solid var(--grc-border);
+}
+
+/* 5. 细节 ================================================================= */
+
+/* ---------- 滚动条 ---------- */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-default-fg-color--lighter) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--md-default-bg-color);
+  border-radius: 10px;
+  background-color: var(--md-default-fg-color--lighter);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--md-default-fg-color--light);
+}
+
+/* ---------- 背景水印 ---------- */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 700px;
+  opacity: var(--grc-watermark-opacity);
+  pointer-events: none;
+}
+
+.md-main,
+.md-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- 动效降级 ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .md-button,
+  .md-typeset .grid.cards > ul > li,
+  .md-nav__link {
+    transition: none;
+  }
+
+  .md-typeset .md-button:hover,
+  .md-typeset .grid.cards > ul > li:hover {
+    transform: none;
+  }
+}
+
+/* ---------- 窄屏 ---------- */
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .grid.cards > ul > li {
+    padding: .9rem;
+  }
+}
+
+/* ---------- 打印 ---------- */
+
+@media print {
+  body::before {
+    display: none;
+  }
+
+  .md-typeset .grid.cards > ul > li {
+    border-color: #ccc;
+    box-shadow: none;
+  }
+}

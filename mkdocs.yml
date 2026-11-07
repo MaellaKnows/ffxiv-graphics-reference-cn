@@ -14,6 +14,10 @@ theme:
   language: zh
   custom_dir: overrides
 
+  # 不加载 Google Fonts：字体栈统一由 stylesheets/extra.css 定义，
+  # 中文按系统字体渲染，避免 Latin 与 CJK 混排不一致。
+  font: false
+
   logo: assets/images/icons.png
   favicon: assets/images/icons.png
 
